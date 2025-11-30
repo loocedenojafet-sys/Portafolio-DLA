@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe de Investigación 2 - Desarrollo Lógico Y Algoritmo</title>
+    <!-- Carga de Tailwind CSS para un diseño moderno y responsive -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Personalización de la fuente para mejor legibilidad */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Fondo ligero */
+        }
+        /* Estilo para el borde lateral de los títulos de sección */
+        .section-header {
+            border-left: 6px solid #10b981; /* Verde esmeralda */
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        /* Contenedor de tablas responsivo */
+        .table-responsive {
+            overflow-x: auto;
+        }
+        /* Estilo para bloques de código de comandos */
+        .code-block {
+            background-color: #1f2937; /* Gris oscuro para terminal */
+            color: #e5e7eb;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.9rem;
+            overflow-x: auto;
+        }
+        /* Estilo para el contenedor de la imagen */
+        .image-container {
+            border: 1px dashed #ccc;
+            background-color: #f3f4f6;
+            min-height: 200px; /* Reducido para que quepan más */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 0.75rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+        }
+        .image-caption {
+             text-align: center;
+             margin-top: 0.5rem;
+             margin-bottom: 1rem;
+             color: #6b7280;
+             font-size: 0.75rem;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8">
+
+    <div class="max-w-5xl mx-auto bg-white shadow-2xl rounded-xl p-6 md:p-12">
+
+        <!-- TÍTULO PRINCIPAL Y ENCABEZADO -->
+        <header class="text-center mb-10 border-b-4 border-green-500 pb-4">
+            <h1 class="text-3xl sm:text-5xl font-extrabold text-gray-800 mb-2">Informe de Investigación 2</h1>
+            <p class="text-xl text-gray-600">Desarrollo Lógico Y Algoritmo</p>
+        </header>
+
+        <!-- METADATOS -->
+        <section class="metadata mb-10 p-5 bg-green-50 rounded-lg border border-green-200">
+            <h2 class="text-2xl font-semibold text-gray-700 mb-3 section-header border-green-600">Metadatos</h2>
+            <ul class="space-y-2 text-gray-700">
+                <li><span class="font-medium text-gray-900">Asignatura:</span> Desarrollo Lógico Y Algoritmo</li>
+                <li><span class="font-medium text-gray-900">Profesor:</span> Napoleón Ibarra</li>
+                <li><span class="font-medium text-gray-900">Estudiantes:</span> [Tu Nombre y Cédula], [Nombre del Compañero y Cédula]</li>
+                <li><span class="font-medium text-gray-900">Fecha de Entrega:</span> 30/09/2025</li>
+            </ul>
+        </section>
+
+        <!-- I PARTE. Análisis DAFO -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-700 section-header">I PARTE. Análisis DAFO (IDE PYTHON vs Lenguaje C)</h2>
+            <p class="mb-4 text-gray-600 text-sm italic">(Valor: 10 puntos)</p>
+
+            <p class="mb-6 text-gray-600">El análisis DAFO se realiza comparando las fortalezas y debilidades del ecosistema de desarrollo de **Python** (incluyendo sus IDEs modernos) versus el lenguaje **C** tradicional.</p>
+
+            <div class="table-responsive shadow-lg rounded-lg">
+                <table class="min-w-full divide-y divide-gray-300 border">
+                    <thead class="bg-gray-700 text-white">
+                        <tr>
+                            <th class="px-4 py-3 text-left text-sm font-medium uppercase tracking-wider">Categoría</th>
+                            <th class="px-4 py-3 text-left text-sm font-medium uppercase tracking-wider">IDE PYTHON</th>
+                            <th class="px-4 py-3 text-left text-sm font-medium uppercase tracking-wider">Lenguaje C</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200 text-sm">
+                        <tr>
+                            <td class="px-4 py-4 font-bold text-green-600">Fortalezas (F)</td>
+                            <td class="px-4 py-4">Ecosistema de librerías (IA, Data Science, Web). Sintaxis legible, curva de aprendizaje rápida. Excelente para scripting y automatización.</td>
+                            <td class="px-4 py-4">Alto rendimiento y velocidad. Control directo sobre la memoria y hardware. Fundamental para entender sistemas operativos.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-4 font-bold text-blue-600">Oportunidades (O)</td>
+                            <td class="px-4 py-4">Crecimiento masivo en IA/ML. Demanda empresarial y en startups. Desarrollo rápido de prototipos.</td>
+                            <td class="px-4 py-4">Relevancia en sistemas embebidos (IoT) y programación de bajo nivel. Oportunidad en optimización de rendimiento.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-4 font-bold text-yellow-600">Debilidades (D)</td>
+                            <td class="px-4 py-4">Velocidad de ejecución más lenta que C (por ser interpretado). Gestión de dependencias (pip) compleja a veces. No apto para control estricto de recursos.</td>
+                            <td class="px-4 py-4">Curva de aprendizaje empinada (punteros, memoria manual). Menos librerías de alto nivel para tareas complejas modernas.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-4 font-bold text-red-600">Amenazas (A)</td>
+                            <td class="px-4 py-4">Competencia de lenguajes rápidos (Go, Julia). Riesgo de dependencia excesiva de librerías de terceros.</td>
+                            <td class="px-4 py-4">C++ y Rust ofrecen mayor seguridad de memoria sin sacrificar tanto rendimiento.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- IMAGEN 1: DAFO/FODA -->
+            <div class="image-container">
+                <img src="https://github.com/user-attachments/assets/96d44547-3fcb-4e68-932c-6ec86d38dfe6" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/800x250/ccc/333?text=IMAGEN+NO+DISPONIBLE';"
+                     alt="Diagrama del Análisis DAFO IDE Python vs Lenguaje C" 
+                     class="w-full h-auto max-w-lg rounded-lg shadow-xl"
+                />
+            </div>
+            <p class="image-caption">Imagen 1. Diagrama del Análisis DAFO para Python y C. **Reemplazar con el diagrama de su práctica.**</p>
+        </section>
+
+        <!-- II PARTE. CASO DE ESTUDIO 1 (Servidor de Datos Linux) -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-700 section-header">II PARTE. CASO DE ESTUDIO 1 (Servidor de Datos Linux)</h2>
+            <p class="mb-4 text-gray-600 text-sm italic">(Valor: 30 puntos)</p>
+
+            <h3 class="text-2xl font-semibold text-gray-800 mb-3">1. Requerimiento</h3>
+            <p class="mb-4 text-gray-600">Implementación de un Servidor de Datos (LINUX) accesible vía SSH y FTP para respaldar y guardar Algoritmos de la Universidad X desde un Equipo X (Laptop).</p>
+
+            <h3 class="text-2xl font-semibold text-gray-800 mb-3">2. Procedimiento y Configuración</h3>
+            <p class="mb-3 text-gray-600">El proyecto se implementó usando una Máquina Virtual con Ubuntu Server.</p>
+
+            <h4 class="text-xl font-medium text-gray-700 mb-2 mt-4">2.1 Configuración de Máquina Virtual (VM)</h4>
+            <ul class="list-disc list-inside ml-4 mb-4 text-gray-600 text-base">
+                <li>**Software de Virtualización:** VirtualBox.</li>
+                <li>**Sistema Operativo:** Ubuntu Server (LINUX).</li>
+                <li>**Configuración de Red:** Adaptador Puente (Bridge Adapter) para asegurar que la VM obtenga una IP en la red local del Equipo X (Laptop).</li>
+            </ul>
+
+            <!-- IMAGEN 2: CONFIGURACIÓN DE RED EN VM -->
+            <div class="image-container">
+                <img src="https://github.com/user-attachments/assets/fddbc502-a4cf-4106-80a9-27e2e91133a2" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/700x350/ccc/333?text=IMAGEN+NO+DISPONIBLE';"
+                     alt="Configuración del Adaptador de Red en modo Puente de la Máquina Virtual" 
+                     class="w-full h-auto max-w-lg rounded-lg shadow-xl"
+                />
+            </div>
+            <p class="image-caption">Imagen 2. Configuración de red de la VM en modo Adaptador Puente (Bridge) para conectividad directa.</p>
+
+            <h4 class="text-xl font-medium text-gray-700 mb-2">2.2 Servicios de Servidor de Datos</h4>
+            <div class="table-responsive mb-6 shadow-md rounded-lg">
+                <table class="min-w-full divide-y divide-gray-200 border">
+                    <thead class="bg-blue-500 text-white">
+                        <tr>
+                            <th class="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Servicio</th>
+                            <th class="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Paquete Linux</th>
+                            <th class="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Propósito</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200 text-sm">
+                        <tr>
+                            <td class="px-4 py-4 font-medium">**SSH**</td>
+                            <td class="px-4 py-4"><code>openssh-server</code></td>
+                            <td class="px-4 py-4">Administración remota segura y ejecución de comandos.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-4 font-medium">**FTP**</td>
+                            <td class="px-4 py-4"><code>vsftpd</code></td>
+                            <td class="px-4 py-4">Transferencia eficiente de archivos (algoritmos) para respaldo.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="text-2xl font-semibold text-gray-800 mb-3">3. Pruebas de Conectividad (Comandos clave)</h3>
+            <p class="mb-3 text-gray-600 text-sm">Para la verificación en tiempo real, se usaron los siguientes comandos en la terminal:</p>
+
+            <!-- IMAGEN 3: DIRECCIONAMIENTO IP DEL SERVIDOR -->
+            <div class="image-container">
+                <img src="https://github.com/user-attachments/assets/39400b30-50f4-4c3d-9e41-fd0ac0650f41" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/700x350/ccc/333?text=IMAGEN+NO+DISPONIBLE';"
+                     alt="Comando ip a para verificar la IP del servidor Linux" 
+                     class="w-full h-auto max-w-lg rounded-lg shadow-xl"
+                />
+            </div>
+            <p class="image-caption">Imagen 3. Verificación de la dirección IP obtenida por la VM de Ubuntu Server (Comando <code>ip a</code> o <code>ifconfig</code>).</p>
+
+            <div class="code-block">
+                <p class="text-green-400 font-mono mb-2">// a) Instalación (Ejemplo):</p>
+                <pre class="font-mono whitespace-pre-wrap">
+# Instalación del servidor SSH
+sudo apt update
+sudo apt install openssh-server
+
+# Instalación del servidor FTP
+sudo apt install vsftpd
+</pre>
+                <p class="text-green-400 font-mono mt-4 mb-2">// b) Conexión SSH (Desde la Laptop, Equipo X):</p>
+                <pre class="font-mono whitespace-pre-wrap">
+# Reemplazar 'usuario' y 'ip_servidor' con los valores reales
+ssh usuario@ip_servidor
+</pre>
+                <p class="text-green-400 font-mono mt-4 mb-2">// c) Verificación de Estado de Servicio:</p>
+                <pre class="font-mono whitespace-pre-wrap">
+# Verificar que el servicio SSH esté activo
+sudo systemctl status ssh
+
+# Verificar que el servicio FTP esté activo
+sudo systemctl status vsftpd
+</pre>
+            </div>
+            
+            <!-- IMAGEN 4: PRUEBA SSH (CONEXIÓN DESDE LA LAPTOP) -->
+            <div class="image-container">
+                <img src="https://github.com/user-attachments/assets/ff63eda7-f55a-479a-8c71-3687002f184a" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/700x350/ccc/333?text=IMAGEN+NO+DISPONIBLE';"
+                     alt="Prueba de conexión SSH exitosa a Servidor de Datos Linux" 
+                     class="w-full h-auto max-w-lg rounded-lg shadow-xl"
+                />
+            </div>
+            <p class="image-caption">Imagen 4. Prueba de conexión SSH exitosa a la Máquina Virtual del Servidor de Datos (Comando <code>ssh usuario@ip_servidor</code>).</p>
+
+            <!-- IMAGEN 5: PRUEBA FTP (TRANSFERENCIA DE ARCHIVO) -->
+            <div class="image-container">
+                <img src="https://github.com/user-attachments/assets/863caab6-cf2b-4a9d-bb26-620f7c6d3e09" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/700x350/ccc/333?text=IMAGEN+NO+DISPONIBLE';"
+                     alt="Prueba de transferencia de archivos por FTP o SFTP" 
+                     class="w-full h-auto max-w-lg rounded-lg shadow-xl"
+                />
+            </div>
+            <p class="image-caption">Imagen 5. Verificación de transferencia de archivos (algoritmos) mediante un cliente FTP o SFTP.</p>
+        </section>
+
+        <!-- III PARTE. CASO DE ESTUDIO 2 (Esquema de Red LAN) -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-700 section-header">III PARTE. CASO DE ESTUDIO 2 (Esquema de Red LAN)</h2>
+            <p class="mb-4 text-gray-600 text-sm italic">(Valor: 30 puntos)</p>
+
+            <h3 class="text-2xl font-semibold text-gray-800 mb-3">1. Requerimiento</h3>
+            <p class="mb-4 text-gray-600">Diseño de esquema de RED LAN para la administración del Centro Regional David-Chiriquí, cubriendo todos los espacios (A-O) con conectividad cableada e inalámbrica.</p>
+
+            <h3 class="text-2xl font-semibold text-gray-800 mb-3">2. Requerimientos Técnicos (Colegio AB)</h3>
+            <div class="table-responsive mb-6 shadow-xl rounded-lg">
+                <table class="min-w-full divide-y divide-gray-200 border">
+                    <thead class="bg-red-500 text-white">
+                        <tr>
+                            <th class="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">EQUIPOS</th>
+                            <th class="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">CANTIDAD</th>
+                            <th class="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">IP/MÁSCARA/PE/DNS</th>
+                            <th class="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">OBSERVACIÓN</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200 text-sm">
+                        <tr>
+                            <td class="px-4 py-4">Impresoras</td>
+                            <td class="px-4 py-4">2</td>
+                            <td class="px-4 py-4">DHCP/Fija (opcional)</td>
+                            <td class="px-4 py-4"></td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-4">Servidor de Datos</td>
+                            <td class="px-4 py-4">1</td>
+                            <td class="px-4 py-4 font-semibold text-red-700">IP Fija: <code>10.10.10.10</code></td>
+                            <td class="px-4 py-4"></td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-4">Laptop</td>
+                            <td class="px-4 py-4">6</td>
+                            <td class="px-4 py-4">DHCP (Inalámbrico)</td>
+                            <td class="px-4 py-4"></td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-4">PC</td>
+                            <td class="px-4 py-4">3</td>
+                            <td class="px-4 py-4">DHCP (Cableado)</td>
+                            <td class="px-4 py-4"></td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-4">Switch (2960)</td>
+                            <td class="px-4 py-4">1 (24 puertos)</td>
+                            <td class="px-4 py-4">-</td>
+                            <td class="px-4 py-4">Punto de agregación.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-4">Router (300N)</td>
+                            <td class="px-4 py-4">1</td>
+                            <td class="px-4 py-4 font-semibold text-red-700">PE: <code>10.10.10.1</code></td>
+                            <td class="px-4 py-4">Gateway y DHCP Server.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-4">Extensor de Señal</td>
+                            <td class="px-4 py-4">2</td>
+                            <td class="px-4 py-4">-</td>
+                            <td class="px-4 py-4">Cobertura inalámbrica.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-4">Subred</td>
+                            <td class="px-4 py-4">-</td>
+                            <td class="px-4 py-4">MR: <code>255.255.255.0</code></td>
+                            <td class="px-4 py-4">Subred Clase A, /24.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-4">DNS</td>
+                            <td class="px-4 py-4">-</td>
+                            <td class="px-4 py-4">DNS1: <code>8.8.8.8</code>, DNS2: <code>8.8.4.4</code></td>
+                            <td class="px-4 py-4"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="text-2xl font-semibold text-gray-800 mb-3">3. Topología de Red LAN (Diseño en Cisco Packet Tracer)</h3>
+            <ul class="list-disc list-outside ml-6 space-y-2 text-gray-600">
+                <li>**Conectividad Central:** El Router 300N (<code>10.10.10.1</code>) es el punto central de la red y el servidor DHCP.</li>
+                <li>**Cableado Fijo:** El Switch 2960 conecta de manera robusta y por cable al Servidor de Datos (<code>10.10.10.10</code>), PCs e Impresoras.</li>
+                <li>**Cobertura Total (Inalámbrica):** El Router junto con los 2 Extensores de Señal garantizan que las 6 Laptops tengan acceso Wi-Fi desde cualquier espacio (A-O).</li>
+            </ul>
+
+            <!-- IMAGEN 6: ESQUEMA DE RED LAN EN PACKET TRACER -->
+            <div class="image-container">
+                <img src="https://github.com/user-attachments/assets/30cbcb85-1df2-4811-8a77-9741e2912dd1" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/800x400/ccc/333?text=IMAGEN+NO+DISPONIBLE';"
+                     alt="Esquema de Red LAN diseñado en Cisco Packet Tracer" 
+                     class="w-full h-auto max-w-lg rounded-lg shadow-xl"
+                />
+            </div>
+
+            <p class="image-caption">Imagen 6. Esquema de Red LAN diseñado en Cisco Packet Tracer. **Reemplazar esta imagen con la captura de pantalla de su práctica.**</p>
+        </section>
+
+        <!-- CONCLUSIÓN -->
+        <footer class="mt-12 pt-6 border-t-2 border-gray-200 text-center">
+            <p class="text-xl font-bold text-gray-700 mb-2">Conclusión</p>
+            <p class="text-gray-600">Este documento HTML ha convertido el informe de investigación a un formato web para su fácil visualización y presentación digital. Los marcadores de imagen están listos para ser reemplazados con las capturas de pantalla de la práctica.</p>
+            <p class="text-gray-500 mt-3 text-sm">¡Listo para completar la parte visual de la Investigación 2!</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

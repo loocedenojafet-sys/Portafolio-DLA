@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 2 | Laboratorio Práctico 1 - Estructuras Secuenciales</title>
+    <!-- Carga de Tailwind CSS y fuente Inter -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #eef2f5;
+        }
+        .section-header {
+            border-left: 4px solid #10b981; /* Verde esmeralda para el laboratorio */
+            padding-left: 1rem;
+        }
+        .code-block {
+            background-color: #1f2937; /* Gris oscuro para código */
+            color: #d1d5db;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+        .problem-card {
+            background-color: #ffffff;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            border-top: 5px solid #10b981;
+        }
+        .diagram-placeholder {
+            min-height: 150px;
+            background-color: #f3f4f6;
+            border: 2px dashed #9ca3af;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.5rem;
+            color: #6b7280;
+            font-style: italic;
+            margin-top: 1rem;
+        }
+        .formula-alert {
+            background-color: #fef3c7; /* yellow-100 */
+            border-left: 4px solid #f59e0b; /* yellow-500 */
+            color: #92400e; /* yellow-900 */
+            padding: 0.75rem;
+            border-radius: 0.375rem;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Contenedor Principal -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+        <!-- Botón de Regreso -->
+        <a href="../index.html" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition duration-300 mb-6 font-medium">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            Volver al Índice de Proyectos
+        </a>
+
+        <!-- Encabezado del Proyecto -->
+        <header class="bg-white rounded-xl p-6 shadow-lg mb-8">
+            <span class="text-sm font-semibold text-green-500 uppercase">Proyecto 2 / Laboratorio Práctico 1</span>
+            <h1 class="text-4xl font-bold mt-2 text-gray-900">Laboratorio Práctico 1: Estructuras Secuenciales</h1>
+            <p class="mt-2 text-lg text-gray-600">Documentación de la resolución de 5 problemas básicos (Estructura Secuencial) con Pseudocódigo, Diagramas de Flujo y Codificación en C.</p>
+        </header>
+        
+        <!-- 1. Descripción del Laboratorio -->
+        <section class="mb-8">
+            <h2 class="section-header text-2xl font-semibold mb-4 text-green-700">Objetivo y Metodología de la Asignación</h2>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <p class="mb-3">
+                    Este laboratorio se enfocó en el desarrollo de la lógica algorítmica y la aplicación de la **Estructura Secuencial**. La entrega requirió la documentación completa del proceso de análisis y codificación para cada problema.
+                </p>
+                <h3 class="font-bold mt-4">Indicaciones de Entrega:</h3>
+                <ul class="list-disc list-inside ml-4 text-gray-600 space-y-1">
+                    <li>Desarrollo de las preguntas en modo **Algoritmo** y **Diagrama de Flujo** (Parte I, 35 Puntos).</li>
+                    <li>Sustentación del trabajo en el aula (15%).</li>
+                    <li>Puntualidad (15%) y Desarrollo (70%).</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 2. Desarrollo de Problemas -->
+        <section>
+            <h2 class="section-header text-2xl font-semibold mb-6 text-green-700">Problemas Resueltos</h2>
+
+            <!-- Problema 1 -->
+            <div class="problem-card">
+                <h3 class="text-xl font-bold mb-3 text-green-600">1. Imprimir "Ciberseguridad"</h3>
+                <p class="text-gray-600 mb-4 font-bold">Indicación Real: Escriba un programa que imprima el mensaje "Ciberseguridad".</p>
+                
+                <h4 class="font-semibold mt-2">Pseudocódigo</h4>
+                <div class="code-block">
+                    INICIO
+                        IMPRIMIR "Ciberseguridad"
+                    FIN
+                </div>
+
+                <h4 class="font-semibold mt-4">Diagrama de Flujo</h4>
+                <div class="diagram-placeholder">
+                   <img src=https://github.com/user-attachments/assets/36aaba98-759e-4b47-a738-ff3365be62c0 alt="Diagrama de flujo para Problema 1" class="w-full h-auto rounded-md">
+                    <!-- Ejemplo: <img src=https://github.com/user-attachments/assets/36aaba98-759e-4b47-a738-ff3365be62c0 alt="Diagrama de flujo para Problema 1" class="w-full h-auto rounded-md"> -->
+                </div>
+                
+                <h4 class="font-semibold mt-4">Código C</h4>
+                <div class="code-block">
+                    #include &lt;stdio.h&gt;
+                    
+                    int main() {
+                        // Imprime el mensaje solicitado
+                        printf("Ciberseguridad\n");
+                        return 0;
+                    }
+                </div>
+            </div>
+
+            <!-- Problema 2 -->
+            <div class="problem-card">
+                <h3 class="text-xl font-bold mb-3 text-green-600">2. Saludo Personalizado</h3>
+                <p class="text-gray-600 mb-4 font-bold">Indicación Real: Escriba un programa que imprima un mensaje de presentación, te pregunte cómo te llamas y te salude.</p>
+                
+                <h4 class="font-semibold mt-2">Pseudocódigo</h4>
+                <div class="code-block">
+                    INICIO
+                        IMPRIMIR "Hola, bienvenido"
+                        IMPRIMIR "¿Cómo te llamas?"
+                        LEER Nombre
+                        IMPRIMIR "Mucho gusto, ", Nombre
+                    FIN
+                </div>
+
+                <h4 class="font-semibold mt-4">Diagrama de Flujo</h4>
+                <div class="diagram-placeholder">
+                    <img src="https://github.com/user-attachments/assets/ee9e53e0-e09c-4d08-8193-f47194ca69cb" alt="Diagrama de flujo para Problema 2" class="w-full h-auto rounded-md">
+                    <!-- Ejemplo: <img src="https://github.com/user-attachments/assets/ee9e53e0-e09c-4d08-8193-f47194ca69cb" alt="Diagrama de flujo para Problema 2" class="w-full h-auto rounded-md"> -->
+                </div>
+                
+                <h4 class="font-semibold mt-4">Código C</h4>
+                <div class="code-block">
+                    #include &lt;stdio.h&gt;
+                    #include &lt;string.h&gt;
+
+                    int main() {
+                        char nombre[50];
+                        
+                        // Mensaje de presentación
+                        printf("Hola, bienvenido\n");
+                        
+                        // Pregunta y lectura del nombre
+                        printf("¿Cómo te llamas? ");
+                        // Lectura de una sola palabra (para evitar problemas de espacios en el scanf básico)
+                        scanf("%s", nombre); 
+                        
+                        // Saludo
+                        printf("Mucho gusto, %s\n", nombre);
+                        return 0;
+                    }
+                </div>
+            </div>
+
+            <!-- Problema 3 -->
+            <div class="problem-card">
+                <h3 class="text-xl font-bold mb-3 text-green-600">3. Cálculo de Precio Neto de Auto Partes</h3>
+                <p class="text-gray-600 mb-4 font-bold">Indicación Real: Una empresa de ventas de partes de autos necesita un programa que calcule y muestre el precio final en balboas de un producto. Para ello, se debe aplicar la siguiente fórmula: $precio\_neto=precio\_costo \cdot (100+margen)/100$.</p>
+                <p class="text-gray-600 mb-4 font-bold">Nota: Tome en cuenta el precio de costo en balboas y el margen en tanto por ciento.</p>
+                
+                <h4 class="font-semibold mt-2">Pseudocódigo</h4>
+                <div class="code-block">
+                    INICIO
+                        LEER PrecioCosto
+                        LEER Margen
+                        PrecioNeto <- PrecioCosto * (100 + Margen) / 100
+                        IMPRIMIR "Precio Neto:", PrecioNeto
+                    FIN
+                </div>
+
+                <h4 class="font-semibold mt-4">Diagrama de Flujo</h4>
+                <div class="diagram-placeholder">
+                    <img src="https://github.com/user-attachments/assets/265830e0-e192-40b3-a00d-0256f8c7e220" alt="Diagrama de flujo para Problema 3" class="w-full h-auto rounded-md">
+                    <!-- Ejemplo: <img src="https://github.com/user-attachments/assets/265830e0-e192-40b3-a00d-0256f8c7e220" alt="Diagrama de flujo para Problema 3" class="w-full h-auto rounded-md"> -->
+                </div>
+                
+                <h4 class="font-semibold mt-4">Código C</h4>
+                <div class="code-block">
+                    #include &lt;stdio.h&gt;
+                    
+                    int main() {
+                        float precioCosto, margen, precioNeto;
+                        
+                        printf("Ingrese el precio de costo (en Balboas): ");
+                        scanf("%f", &precioCosto);
+                        
+                        printf("Ingrese el margen de ganancia (en %%): ");
+                        scanf("%f", &margen);
+                        
+                        // Aplicación de la fórmula exacta de la asignación
+                        precioNeto = precioCosto * (100.0 + margen) / 100.0; 
+                        
+                        printf("\nEl precio final (neto) es: B/. %.2f\n", precioNeto);
+                        return 0;
+                    }
+                </div>
+            </div>
+
+            <!-- Problema 4 -->
+            <div class="problem-card">
+                <h3 class="text-xl font-bold mb-3 text-green-600">4. Geometría del Triángulo Rectángulo</h3>
+                <p class="text-gray-600 mb-4 font-bold">Indicación Real: Escriba un programa que lea los valores de los catetos de un triángulo rectángulo y calcule cuál es la hipotenusa, el área y el perímetro del triángulo mediante las siguientes expresiones:</p>
+                
+                <h4 class="font-semibold mt-2">Fórmulas de la Asignación:</h4>
+                <ul class="list-disc list-inside ml-4 mb-4 text-gray-600 space-y-1">
+                    <li>Hipotenusa: $h=(c_{1}^{2}+c_{2}^{2})^{1/2}$</li>
+                    <li>Perímetro: $p=h+c_{1}+c_{2}$</li>
+                    <li>Área: $A=(c_{1}+c_{2})/2$</li>
+                </ul>
+
+                <div class="formula-alert">
+                    ⚠️ **Nota Importante:** Se mantiene la fórmula de Área $A=(c_{1}+c_{2})/2$ tal como fue especificada en el documento del Laboratorio, aunque la fórmula matemática estándar para el área es $A=(c_{1} \cdot c_{2})/2$.
+                </div>
+
+                <h4 class="font-semibold mt-2">Pseudocódigo</h4>
+                <div class="code-block">
+                    INICIO
+                        LEER C1
+                        LEER C2
+                        Hipotenusa <- RAIZ(C1^2 + C2^2)
+                        Area <- (C1 + C2) / 2 // Usando la formula especificada
+                        Perimetro <- Hipotenusa + C1 + C2
+                        IMPRIMIR "Hipotenusa:", Hipotenusa
+                        IMPRIMIR "Área:", Area
+                        IMPRIMIR "Perímetro:", Perimetro
+                    FIN
+                </div>
+
+                <h4 class="font-semibold mt-4">Diagrama de Flujo</h4>
+                <div class="diagram-placeholder">
+                    <img src="https://github.com/user-attachments/assets/b6f8cff7-0f54-4c27-9e69-e08ae7948fcf" alt="Diagrama de flujo para Problema 4" class="w-full h-auto rounded-md">
+                    <!-- Ejemplo: <img src="https://github.com/user-attachments/assets/b6f8cff7-0f54-4c27-9e69-e08ae7948fcf" alt="Diagrama de flujo para Problema 4" class="w-full h-auto rounded-md"> -->
+                </div>
+                
+                <h4 class="font-semibold mt-4">Código C</h4>
+                <div class="code-block">
+                    #include &lt;stdio.h&gt;
+                    #include &lt;math.h&gt; // Necesario para sqrt() y pow()
+                    
+                    int main() {
+                        float c1, c2, hipotenusa, area, perimetro;
+                        
+                        printf("Ingrese el valor del cateto 1: ");
+                        scanf("%f", &c1);
+                        
+                        printf("Ingrese el valor del cateto 2: ");
+                        scanf("%f", &c2);
+                        
+                        // Hipotenusa: sqrt(c1^2 + c2^2)
+                        hipotenusa = sqrt(pow(c1, 2) + pow(c2, 2));
+                        
+                        // ATENCIÓN: Se usa la fórmula de área A=(c1+c2)/2, según la indicación del Laboratorio.
+                        area = (c1 + c2) / 2.0; 
+                        
+                        // Perímetro: h + c1 + c2
+                        perimetro = hipotenusa + c1 + c2;
+                        
+                        printf("\nResultados:\n");
+                        printf("Hipotenusa: %.2f\n", hipotenusa);
+                        printf("Área (fórmula provista): %.2f\n", area);
+                        printf("Perímetro: %.2f\n", perimetro);
+                        
+                        return 0;
+                    }
+                </div>
+            </div>
+
+            <!-- Problema 5 -->
+            <div class="problem-card">
+                <h3 class="text-xl font-bold mb-3 text-green-600">5. Informe de Ventas de Refrescos</h3>
+                <p class="text-gray-600 mb-4 font-bold">Indicación Real: Una compañía de refrescos comercializa tres productos: de cola, de naranja y de limón. Se desea realizar un programa que calcule las ventas realizadas de cada producto. Para ellos, se leerá la cantidad vendida (máximo 5000000) y el precio en balboas de cada producto y se mostrará un informe de ventas como el que sigue:</p>
+                
+                <h4 class="font-semibold mt-2">Formato de Informe Solicitado:</h4>
+                <div class="code-block">
+                    "Producto", "Ventas", "Precio", "Total"
+                    "Cola", "1000000", "0.17", "170000.00"
+                    ...
+                </div>
+
+                <h4 class="font-semibold mt-2">Pseudocódigo</h4>
+                <div class="code-block">
+                    INICIO
+                        LEER Precio_Cola, Precio_Naranja, Precio_Limon
+                        LEER Cantidad_Cola, Cantidad_Naranja, Cantidad_Limon
+                        
+                        Total_Cola <- Cantidad_Cola * Precio_Cola
+                        Total_Naranja <- Cantidad_Naranja * Precio_Naranja
+                        Total_Limon <- Cantidad_Limon * Precio_Limon
+                        Total_General <- Total_Cola + Total_Naranja + Total_Limon
+
+                        IMPRIMIR "Total Cola:", Total_Cola
+                        IMPRIMIR "Total Naranja:", Total_Naranja
+                        IMPRIMIR "Total Limón:", Total_Limon
+                        IMPRIMIR "TOTAL GENERAL:", Total_General
+                    FIN
+                </div>
+
+                <h4 class="font-semibold mt-4">Diagrama de Flujo</h4>
+                <div class="diagram-placeholder">
+                    <img src="https://github.com/user-attachments/assets/00f8f2d4-9ca2-44b5-a29e-aae669d983dc" alt="Diagrama de flujo para Problema 5" class="w-full h-auto rounded-md">
+                    <!-- Ejemplo: <img src="https://github.com/user-attachments/assets/00f8f2d4-9ca2-44b5-a29e-aae669d983dc" alt="Diagrama de flujo para Problema 5" class="w-full h-auto rounded-md"> -->
+                </div>
+                
+                <h4 class="font-semibold mt-4">Código C</h4>
+                <div class="code-block">
+                    #include &lt;stdio.h&gt;
+                    
+                    int main() {
+                        float p_cola, p_naranja, p_limon;
+                        // Usamos long int para la cantidad vendida, respetando el máximo de 5,000,000
+                        long int c_cola, c_naranja, c_limon; 
+                        float t_cola, t_naranja, t_limon, t_general;
+
+                        // 1. Lectura de Precios
+                        printf("--- Ingreso de Precios ---\n");
+                        printf("Precio de Cola (B/.): ");
+                        scanf("%f", &p_cola);
+                        printf("Precio de Naranja (B/.): ");
+                        scanf("%f", &p_naranja);
+                        printf("Precio de Limón (B/.): ");
+                        scanf("%f", &p_limon);
+
+                        // 2. Lectura de Cantidades
+                        printf("\n--- Ingreso de Cantidades Vendidas (Max 5,000,000) ---\n");
+                        printf("Cantidad vendida de Cola: ");
+                        scanf("%ld", &c_cola);
+                        printf("Cantidad vendida de Naranja: ");
+                        scanf("%ld", &c_naranja);
+                        printf("Cantidad vendida de Limón: ");
+                        scanf("%ld", &c_limon);
+                        
+                        // 3. Cálculos
+                        // Convertimos la cantidad a float para el cálculo, luego volvemos al float para los totales
+                        t_cola = (float)c_cola * p_cola;
+                        t_naranja = (float)c_naranja * p_naranja;
+                        t_limon = (float)c_limon * p_limon;
+                        t_general = t_cola + t_naranja + t_limon;
+
+                        // 4. Informe de Ventas (Usando formato de tabla para claridad)
+                        printf("\n\n--- INFORME DE VENTAS ---\n");
+                        // %-10s alinea a la izquierda y da 10 espacios
+                        printf("%-10s | %-10s | %-8s | %-10s\n", "PRODUCTO", "CANTIDAD", "PRECIO", "TOTAL");
+                        printf("-------------------------------------------\n");
+                        printf("%-10s | %-10ld | %-8.2f | B/. %.2f\n", "Cola", c_cola, p_cola, t_cola);
+                        printf("%-10s | %-10ld | %-8.2f | B/. %.2f\n", "Naranja", c_naranja, p_naranja, t_naranja);
+                        printf("%-10s | %-10ld | %-8.2f | B/. %.2f\n", "Limón", c_limon, p_limon, t_limon);
+                        printf("-------------------------------------------\n");
+                        printf("%-10s | %-10s | %-8s | B/. %.2f\n", "TOTAL", "", "", t_general);
+
+                        return 0;
+                    }
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Pie de Página (Footer) -->
+    <footer class="bg-gray-800 text-white mt-12 py-4">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <p class="text-xs opacity-75">Documentación del Laboratorio Práctico 1. Asignatura Desarrollo Lógico y Algoritmo.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

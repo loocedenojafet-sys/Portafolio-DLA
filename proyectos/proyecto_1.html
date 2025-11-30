@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 1 | Investigación - Historia y Conceptos de Programación</title>
+    <!-- Carga de Tailwind CSS y fuente Inter -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #eef2f5;
+        }
+        .section-header {
+            border-left: 4px solid #3b82f6;
+            padding-left: 1rem;
+        }
+        /* Contenedor para la imagen para que se vea bien en la web */
+        .image-container {
+            border: 1px solid #ddd;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            background-color: #fff;
+            max-width: 90%; /* Ajuste para mejor visualización */
+            margin: 0 auto;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 0.375rem;
+        }
+        /* Estilo para simular el Hexagrama/Cuadro Comparativo */
+        .comparative-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        .comparative-table th, .comparative-table td {
+            border: 1px solid #e2e8f0;
+            padding: 12px;
+            text-align: left;
+        }
+        .comparative-table th {
+            background-color: #f1f5f9;
+            font-weight: 600;
+            color: #1e293b;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Contenedor Principal -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+        <!-- Botón de Regreso -->
+        <a href="../index.html" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition duration-300 mb-6 font-medium">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            Volver al Índice de Proyectos
+        </a>
+
+        <!-- Encabezado del Proyecto -->
+        <header class="bg-white rounded-xl p-6 shadow-lg mb-8">
+            <span class="text-sm font-semibold text-blue-500 uppercase">Proyecto 1 / Investigación (I y II Parte)</span>
+            <h1 class="text-4xl font-bold mt-2 text-gray-900">Historia y Conceptos Fundamentales de la Programación</h1>
+            <p class="mt-2 text-lg text-gray-600">Documentación de la primera asignación utilizando infografía y hexagrama (pentagrama).</p>
+        </header>
+        
+        <!-- 1. Descripción del Problema / Objetivo -->
+        <section class="mb-8">
+            <h2 class="section-header text-2xl font-semibold mb-4 text-blue-700">Objetivo de la Asignación</h2>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <p class="mb-3">
+                    La primera asignación del curso consistió en dos partes de investigación. El objetivo fue establecer las bases teóricas del desarrollo lógico mediante la exploración de la **Historia de la Programación** y la definición de los **elementos clave** de un programa.
+                </p>
+                <h3 class="font-bold mt-4">Puntos Clave Investigados:</h3>
+                <ul class="list-disc list-inside ml-4 text-gray-600 space-y-1">
+                    <li>Historia, concepto y características de la programación.</li>
+                    <li>Importancia y relevancia de la programación en la vida cotidiana.</li>
+                    <li>Cuadro comparativo entre Algoritmo, Codificación, Prueba de Escritorio y Compilación/Ejecución.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 2. I PARTE: Infografía (Historia de la Programación) -->
+        <section class="mb-8">
+            <h2 class="section-header text-2xl font-semibold mb-4 text-blue-700">I Parte: Infografía - Historia de la Programación</h2>
+            <p class="mb-4 text-gray-600">
+                La infografía visualiza los orígenes de la programación, desde sus fundamentos teóricos en el siglo XIX (Ada Lovelace) hasta la era moderna de la IA y el código abierto.
+            </p>
+
+            <div class="image-container">
+                <!-- Por favor, reemplaza la URL de ejemplo por la URL de tu Infografía real -->
+                <img src="https://github.com/loocedenojafet-sys/DSL/blob/main/Infograf%C3%ADa%20Tecnolog%C3%ADa%20y%20Digitalizaci%C3%B3n%20Ilustrado%20Azul%20y%20Morado%20(2)%20(1)_page-0001.jpg?raw=true" 
+                     alt="Infografía sobre la Historia de la Programación" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/800x400/3B82F6/FFFFFF?text=IMAGEN+DE+INFOGRAFIA';">
+            </div>
+            <p class="text-center text-sm text-gray-500 mt-2">
+                *Nota: Reemplace la imagen placeholder con el enlace directo a su Infografía.
+            </p>
+        </section>
+        
+        <!-- 3. II PARTE: Hexagrama / Cuadro Comparativo (Conceptos Clave) -->
+        <section class="mb-8">
+            <h2 class="section-header text-2xl font-semibold mb-4 text-blue-700">II Parte: Hexagrama / Cuadro Comparativo de Conceptos</h2>
+            <p class="mb-4 text-gray-600">
+                El hexagrama (interpretado aquí como un cuadro comparativo y mapa mental) detalla y contrasta los cuatro componentes esenciales del proceso de creación de software.
+            </p>
+
+            <!-- Cuadro comparativo basado en el contenido del PDF "Jafet LOO (1).pdf" -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <table class="comparative-table">
+                    <thead>
+                        <tr>
+                            <th>Concepto</th>
+                            <th>Definición y Características</th>
+                            <th>Importancia / Relevancia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="font-semibold">Algoritmo</td>
+                            <td>Conjunto de pasos ordenados que define la lógica de la solución. Es la base para la codificación.</td>
+                            <td>Esencial para resolver problemas de manera sistemática y sirve como plano para cualquier programa.</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold">Codificación</td>
+                            <td>Traducción de algoritmos a un lenguaje de programación, utilizando reglas sintácticas y semánticas. Genera el programa fuente.</td>
+                            <td>Convierte la lógica (algoritmo) en instrucciones ejecutables por la máquina.</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold">Compilación / Ejecución</td>
+                            <td>**Compilación:** Traducción del programa fuente a código máquina. **Ejecución:** El programa corre y produce resultados.</td>
+                            <td>Proceso vital que permite que el software pase de ser texto a una aplicación funcional, interactuando con el usuario.</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold">Prueba de Escritorio</td>
+                            <td>Simulación manual del algoritmo, pasando datos de prueba para detectar errores lógicos antes de la codificación.</td>
+                            <td>Garantiza la corrección lógica y la verificación de los pasos sin depender de la computadora.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <p class="mt-6 text-gray-600">
+                Adicionalmente, se incluyó un **Mapa Mental** que organiza visualmente la relación entre estos conceptos y los paradigmas de programación (Imperativa, Orientada a Objetos, Funcional, Lógica).
+            </p>
+            
+            <div class="image-container mt-4">
+                <!-- Por favor, reemplaza la URL de ejemplo por la URL de tu Hexagrama/Mapa Mental real -->
+                <img src="https://github.com/loocedenojafet-sys/DSL/blob/main/Jafet%20LOO%20%20(1)_page-0001.jpg?raw=true" 
+                     alt="Hexagrama o Mapa Mental de Conceptos de Programación" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/800x400/3B82F6/FFFFFF?text=IMAGEN+DE+HEXAGRAMA';">
+            </div>
+            <p class="text-center text-sm text-gray-500 mt-2">
+                *Nota: Reemplace la imagen placeholder con el enlace directo a su Pentagrama/Hexagrama.
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- Pie de Página (Footer) -->
+    <footer class="bg-gray-800 text-white mt-12 py-4">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <p class="text-xs opacity-75">Documentación del Proyecto 1. Asignatura DLA.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

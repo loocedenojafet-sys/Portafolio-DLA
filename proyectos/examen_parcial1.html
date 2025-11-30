@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 4 | Examen Parcial 1 - Estructuras Condicionales Avanzadas</title>
+    <!-- Carga de Tailwind CSS y fuente Inter -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #eef2f5;
+        }
+        .section-header {
+            border-left: 4px solid #f97316; /* Naranja para Parcial */
+            padding-left: 1rem;
+        }
+        .code-block {
+            background-color: #1f2937; /* Gris oscuro para código */
+            color: #d1d5db;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+        .problem-card {
+            background-color: #ffffff;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            border-top: 5px solid #f97316;
+        }
+        .diagram-placeholder {
+            min-height: 150px;
+            background-color: #f3f4f6;
+            border: 2px dashed #9ca3af;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.5rem;
+            color: #6b7280;
+            font-style: italic;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Contenedor Principal -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+        <!-- Botón de Regreso -->
+        <a href="../index.html" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition duration-300 mb-6 font-medium">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            Volver al Índice de Proyectos
+        </a>
+
+        <!-- Encabezado del Proyecto -->
+        <header class="bg-white rounded-xl p-6 shadow-lg mb-8">
+            <span class="text-sm font-semibold text-orange-600 uppercase">Proyecto 4 / Evaluación Parcial</span>
+            <h1 class="text-4xl font-bold mt-2 text-gray-900">Examen Parcial 1: Estructuras Condicionales y Lógica de Fechas</h1>
+            <p class="mt-2 text-lg text-gray-600">Documentación de la resolución del primer examen parcial, centrado en estructuras condicionales anidadas y lógica para el manejo de datos complejos como fechas y salarios.</p>
+        </header>
+        
+        <!-- 1. Criterios y Procedimiento -->
+        <section class="mb-8">
+            <h2 class="section-header text-2xl font-semibold mb-4 text-orange-700">Procedimiento y Criterios de Evaluación</h2>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <p class="mb-3">
+                    El parcial consistió en el desarrollo de 5 problemas en Pseudocódigo, Diagrama de Flujo y Lenguaje C, abarcando estructuras secuenciales y condicionales.
+                </p>
+                <h3 class="font-bold mt-4">Ponderación General:</h3>
+                <ul class="list-disc list-inside ml-4 text-gray-600 space-y-1">
+                    <li>Pseudocódigo: 15 Puntos</li>
+                    <li>Diagrama de Flujo: 15 Puntos</li>
+                    <li>Lenguaje C: 45 Puntos</li>
+                </ul>
+                <p class="mt-4 text-sm text-gray-500">
+                    Se evaluó el Desarrollo (75%), la Sustentación (15%) y la Responsabilidad/Puntualidad (10%).
+                </p>
+            </div>
+        </section>
+
+        <!-- 2. Desarrollo de Problemas -->
+        <section>
+            <h2 class="section-header text-2xl font-semibold mb-6 text-orange-700">Problemas Resueltos del Parcial</h2>
+
+            <!-- Problema 1: Rango Numérico -->
+            <div class="problem-card">
+                <h3 class="text-xl font-bold mb-3 text-orange-600">1. Verificación de Rangos Numéricos</h3>
+                <p class="text-gray-600 mb-4 font-bold">Indicación: Escribir una solución que lea un valor numérico y que me diga si está entre $10$ y $15$, y también que diga si está entre $5$ y $10$.</p>
+                
+                <h4 class="font-semibold mt-4">Pseudocódigo</h4>
+                <div class="code-block">
+                    INICIO
+                        LEER Numero
+                        
+                        SI (Numero >= 10) Y (Numero <= 15) ENTONCES
+                            IMPRIMIR "El número", Numero, "está en el rango de 10 a 15."
+                        FIN SI
+                        
+                        SI (Numero >= 5) Y (Numero <= 10) ENTONCES
+                            IMPRIMIR "El número", Numero, "está en el rango de 5 a 10."
+                        FIN SI
+
+                        SI (Numero < 5) O (Numero > 15) ENTONCES
+                            IMPRIMIR "El número no cumple ninguna condición principal."
+                        FIN SI
+                    FIN
+                </div>
+
+                <h4 class="font-semibold mt-4">Diagrama de Flujo</h4>
+                <div class="diagram-placeholder">
+                  <img src="https://github.com/user-attachments/assets/ccfae274-5290-4495-9541-1a3974cfb90c" alt="Diagrama de flujo para Problema 1" class="w-full h-auto rounded-md"> -->
+                    <!-- Ejemplo: <img src="https://github.com/user-attachments/assets/ccfae274-5290-4495-9541-1a3974cfb90c" alt="Diagrama de flujo para Problema 1" class="w-full h-auto rounded-md"> -->
+                </div>
+                
+                <h4 class="font-semibold mt-4">Código C</h4>
+                <div class="code-block">
+                    #include &lt;stdio.h&gt;
+                    
+                    int main() {
+                        float numero;
+                        
+                        printf("Ingrese un valor numerico: ");
+                        scanf("%f", &numero);
+                        
+                        printf("\n--- Resultados de Verificacion ---\n");
+
+                        // Rango 1: 10 a 15 (inclusive)
+                        if (numero >= 10 && numero <= 15) {
+                            printf("El numero %.2f esta en el rango de 10 a 15.\n", numero);
+                        } else {
+                            printf("El numero %.2f NO esta en el rango de 10 a 15.\n", numero);
+                        }
+                        
+                        // Rango 2: 5 a 10 (inclusive)
+                        if (numero >= 5 && numero <= 10) {
+                            printf("El numero %.2f esta en el rango de 5 a 10.\n", numero);
+                        } else {
+                             printf("El numero %.2f NO esta en el rango de 5 a 10.\n", numero);
+                        }
+                        
+                        return 0;
+                    }
+                </div>
+            </div>
+
+            <!-- Problema 2: Comparación de Fechas -->
+            <div class="problem-card">
+                <h3 class="text-xl font-bold mb-3 text-orange-600">2. Formato y Comparación de Tres Fechas</h3>
+                <p class="text-gray-600 mb-4 font-bold">Indicación: Codificar una solución que acepte fechas escritas de modo usual (e.g., día, mes, año) y que visualice en 3 números (DD MM YYYY). Esto se debe realizar para 3 valores introducidos por teclado, al final me debe decir también, cuál es la fecha más baja y cuál es la fecha más alta.</p>
+                
+                <h4 class="font-semibold mt-4">Pseudocódigo</h4>
+                <div class="code-block">
+                    INICIO
+                        // Asumimos que se leen 3 fechas en formato numerico (D1, M1, A1, D2, M2, A2, D3, M3, A3)
+                        LEER D1, M1, A1, D2, M2, A2, D3, M3, A3
+                        
+                        // Convertir cada fecha a un valor unico para facilitar la comparacion (AAAA * 10000 + MM * 100 + DD)
+                        V1 <- (A1 * 10000) + (M1 * 100) + D1
+                        V2 <- (A2 * 10000) + (M2 * 100) + D2
+                        V3 <- (A3 * 10000) + (M3 * 100) + D3
+
+                        IMPRIMIR "Fechas ingresadas:", D1, M1, A1, D2, M2, A2, D3, M3, A3
+                        
+                        // Determinar la fecha más baja (V_Baja)
+                        V_Baja <- V1
+                        SI V2 < V_Baja ENTONCES
+                            V_Baja <- V2
+                        FIN SI
+                        SI V3 < V_Baja ENTONCES
+                            V_Baja <- V3
+                        FIN SI
+                        
+                        // Determinar la fecha más alta (V_Alta)
+                        V_Alta <- V1
+                        SI V2 > V_Alta ENTONCES
+                            V_Alta <- V2
+                        FIN SI
+                        SI V3 > V_Alta ENTONCES
+                            V_Alta <- V3
+                        FIN SI
+
+                        IMPRIMIR "Fecha más baja (Formato V):", V_Baja
+                        IMPRIMIR "Fecha más alta (Formato V):", V_Alta
+                    FIN
+                </div>
+
+                <h4 class="font-semibold mt-4">Diagrama de Flujo</h4>
+                <div class="diagram-placeholder">
+                    <img src="https://github.com/user-attachments/assets/9bf3267c-99a5-464a-a9bc-f78e8d95b3bc" alt="Diagrama de flujo para Problema 2" class="w-full h-auto rounded-md"> -->
+                    <!-- Ejemplo: <img src="https://github.com/user-attachments/assets/9bf3267c-99a5-464a-a9bc-f78e8d95b3bc" alt="Diagrama de flujo para Problema 2" class="w-full h-auto rounded-md"> -->
+                </div>
+                
+                <h4 class="font-semibold mt-4">Código C</h4>
+                <div class="code-block">
+                    #include &lt;stdio.h&gt;
+                    #include &lt;string.h&gt;
+                    
+                    // Estructura para almacenar la fecha
+                    struct Fecha {
+                        int dia;
+                        int mes;
+                        int anio;
+                        long valor_comparable; // Usado para comparacion AAAA*10000 + MM*100 + DD
+                    };
+
+                    // Funcion para convertir nombre del mes a numero
+                    int obtener_num_mes(char mes[]) {
+                        // Implementacion simple solo para el ejemplo
+                        if (strcmp(mes, "enero") == 0) return 1;
+                        if (strcmp(mes, "febrero") == 0) return 2;
+                        // ... se podria completar para todos los meses
+                        return 0; 
+                    }
+
+                    void leer_fecha(struct Fecha *f, int num) {
+                        char mes_str[20];
+                        printf("\n--- Ingrese Fecha #%d ---\n", num);
+                        printf("Dia (DD): ");
+                        scanf("%d", &f->dia);
+                        printf("Mes (ej: febrero): ");
+                        scanf("%s", mes_str);
+                        printf("Anio (YYYY): ");
+                        scanf("%d", &f->anio);
+
+                        f->mes = obtener_num_mes(mes_str);
+                        // Convertir a un valor numerico para facilitar la comparacion
+                        f->valor_comparable = (long)f->anio * 10000 + (long)f->mes * 100 + (long)f->dia;
+                    }
+
+                    int main() {
+                        struct Fecha f1, f2, f3, mas_baja, mas_alta;
+
+                        leer_fecha(&f1, 1);
+                        leer_fecha(&f2, 2);
+                        leer_fecha(&f3, 3);
+                        
+                        // Inicializar
+                        mas_baja = f1;
+                        mas_alta = f1;
+
+                        // Determinar la fecha más baja
+                        if (f2.valor_comparable < mas_baja.valor_comparable) {
+                            mas_baja = f2;
+                        }
+                        if (f3.valor_comparable < mas_baja.valor_comparable) {
+                            mas_baja = f3;
+                        }
+
+                        // Determinar la fecha más alta
+                        if (f2.valor_comparable > mas_alta.valor_comparable) {
+                            mas_alta = f2;
+                        }
+                        if (f3.valor_comparable > mas_alta.valor_comparable) {
+                            mas_alta = f3;
+                        }
+
+                        printf("\n--- Fechas Ingresadas (DD MM YYYY) ---\n");
+                        printf("Fecha 1: %02d %02d %d\n", f1.dia, f1.mes, f1.anio);
+                        printf("Fecha 2: %02d %02d %d\n", f2.dia, f2.mes, f2.anio);
+                        printf("Fecha 3: %02d %02d %d\n", f3.dia, f3.mes, f3.anio);
+                        
+                        printf("\n--- Comparacion ---\n");
+                        printf("Fecha MAS BAJA: %02d %02d %d\n", mas_baja.dia, mas_baja.mes, mas_baja.anio);
+                        printf("Fecha MAS ALTA: %02d %02d %d\n", mas_alta.dia, mas_alta.mes, mas_alta.anio);
+
+                        return 0;
+                    }
+                </div>
+            </div>
+
+            <!-- Problema 3: Cálculo de Edad -->
+            <div class="problem-card">
+                <h3 class="text-xl font-bold mb-3 text-orange-600">3. Cálculo de Edad y Formato de Bebé</h3>
+                <p class="text-gray-600 mb-4 font-bold">Indicación: Dadas 2 fechas (nacimiento y actual), deduzca y visualice la edad del individuo. Si es un bebé de menos de un año, la edad se debe dar en meses y días; en caso contrario, en años.</p>
+                
+                <h4 class="font-semibold mt-4">Pseudocódigo</h4>
+                <div class="code-block">
+                    INICIO
+                        LEER Dia_Nac, Mes_Nac, Anio_Nac
+                        LEER Dia_Actual, Mes_Actual, Anio_Actual
+                        
+                        // Calcular la edad inicial en años
+                        Edad_Anios <- Anio_Actual - Anio_Nac
+                        
+                        // Ajustar si el cumpleaños no ha pasado
+                        SI Mes_Actual < Mes_Nac O (Mes_Actual = Mes_Nac Y Dia_Actual < Dia_Nac) ENTONCES
+                            Edad_Anios <- Edad_Anios - 1
+                        FIN SI
+                        
+                        IMPRIMIR "Fecha de Nacimiento:", Dia_Nac, Mes_Nac, Anio_Nac
+                        
+                        SI Edad_Anios = 0 ENTONCES
+                            // Lógica de bebé (menos de 1 año), se calcula en meses/días
+                            Edad_Meses <- (Mes_Actual - Mes_Nac)
+                            Edad_Dias <- (Dia_Actual - Dia_Nac)
+                            
+                            // Ajustar si Dia_Actual es menor que Dia_Nac
+                            SI Edad_Dias < 0 ENTONCES
+                                Edad_Meses <- Edad_Meses - 1 // Restar 1 mes
+                                Edad_Dias <- Edad_Dias + 30 // Asumimos mes promedio de 30 días
+                            FIN SI
+                            
+                            IMPRIMIR "Edad: ", Edad_Meses, "meses y", Edad_Dias, "días."
+                        SINO
+                            IMPRIMIR "Edad:", Edad_Anios, "años."
+                        FIN SI
+                    FIN
+                </div>
+
+                <h4 class="font-semibold mt-4">Diagrama de Flujo</h4>
+                <div class="diagram-placeholder">
+                    <img src="https://github.com/user-attachments/assets/58c101c6-1f52-4a58-b3e5-7557714314d9" alt="Diagrama de flujo para Problema 3" class="w-full h-auto rounded-md"> -->
+                    <!-- Ejemplo: <img src="https://github.com/user-attachments/assets/58c101c6-1f52-4a58-b3e5-7557714314d9" alt="Diagrama de flujo para Problema 3" class="w-full h-auto rounded-md"> -->
+                </div>
+                
+                <h4 class="font-semibold mt-4">Código C</h4>
+                <div class="code-block">
+                    #include &lt;stdio.h&gt;
+                    
+                    // Funcion para el calculo de edad simplificado
+                    int main() {
+                        int dn, mn, an, da, ma, aa; // Dia, Mes, Anio (Nacimiento/Actual)
+                        int edad_anios, edad_meses, edad_dias;
+
+                        // Lectura de Fechas
+                        printf("Ingrese la fecha de nacimiento (DD MM AAAA):\n");
+                        scanf("%d %d %d", &dn, &mn, &an);
+                        
+                        printf("Ingrese la fecha actual (DD MM AAAA):\n");
+                        scanf("%d %d %d", &da, &ma, &aa);
+
+                        // 1. Calculo de edad en años
+                        edad_anios = aa - an;
+
+                        // Ajuste si no ha cumplido años
+                        if (ma < mn || (ma == mn && da < dn)) {
+                            edad_anios--;
+                        }
+
+                        printf("\n--- Resultado de Edad ---\n");
+
+                        if (edad_anios >= 1) {
+                            // Si tiene 1 año o más, se muestra en años
+                            printf("El individuo tiene %d anios.\n", edad_anios);
+                        } else {
+                            // Si tiene menos de 1 año (es un bebé), se muestra en meses y dias
+
+                            // Calculo de meses: 12 - Meses restantes del anio de nacimiento + Meses pasados del anio actual
+                            if (aa == an) { // Mismo año
+                                edad_meses = ma - mn;
+                            } else { // Año siguiente
+                                edad_meses = (12 - mn) + ma;
+                            }
+
+                            // Calculo de días
+                            edad_dias = da - dn;
+
+                            // Ajuste si el dia actual es menor que el dia de nacimiento
+                            if (edad_dias < 0) {
+                                // Asumimos 30 dias por mes para simplificar
+                                edad_meses--;
+                                edad_dias += 30; 
+                            }
+                            
+                            printf("El individuo es un bebe: %d meses y %d dias.\n", edad_meses, edad_dias);
+                        }
+
+                        return 0;
+                    }
+                </div>
+            </div>
+
+            <!-- Problema 4: Año Bisiesto -->
+            <div class="problem-card">
+                <h3 class="text-xl font-bold mb-3 text-orange-600">4. Determinación de Año Bisiesto</h3>
+                <p class="text-gray-600 mb-4 font-bold">Indicación: Codificar una solución que determine si un año es bisiesto. Es bisiesto si es múltiplo de $4$; sin embargo, los años que son múltiplos de $100$ sólo son bisiestos cuando también son múltiplos de $400$.</p>
+                
+                <h4 class="font-semibold mt-4">Pseudocódigo</h4>
+                <div class="code-block">
+                    INICIO
+                        LEER Anio
+                        
+                        SI (Anio MOD 4 = 0) ENTONCES
+                            SI (Anio MOD 100 = 0) ENTONCES
+                                SI (Anio MOD 400 = 0) ENTONCES
+                                    IMPRIMIR Anio, "ES un año bisiesto."
+                                SINO
+                                    IMPRIMIR Anio, "NO es un año bisiesto."
+                                FIN SI
+                            SINO
+                                IMPRIMIR Anio, "ES un año bisiesto."
+                            FIN SI
+                        SINO
+                            IMPRIMIR Anio, "NO es un año bisiesto."
+                        FIN SI
+                    FIN
+                </div>
+
+                <h4 class="font-semibold mt-4">Diagrama de Flujo</h4>
+                <div class="diagram-placeholder">
+                    <img src="https://github.com/user-attachments/assets/6c66de55-d369-4405-ac88-d9fd8869ae1b" alt="Diagrama de flujo para Problema 4" class="w-full h-auto rounded-md"> -->
+                    <!-- Ejemplo: <img src="https://github.com/user-attachments/assets/6c66de55-d369-4405-ac88-d9fd8869ae1b" alt="Diagrama de flujo para Problema 4" class="w-full h-auto rounded-md"> -->
+                </div>
+                
+                <h4 class="font-semibold mt-4">Código C</h4>
+                <div class="code-block">
+                    #include &lt;stdio.h&gt;
+                    
+                    int main() {
+                        int anio;
+                        
+                        printf("Ingrese el anio a verificar: ");
+                        scanf("%d", &anio);
+                        
+                        // Logica del año bisiesto:
+                        // 1. Es divisible por 400, O
+                        // 2. Es divisible por 4 Y NO es divisible por 100.
+                        if ((anio % 400 == 0) || (anio % 4 == 0 && anio % 100 != 0)) {
+                            printf("\nEl anio %d ES un anio bisiesto.\n", anio);
+                        } else {
+                            printf("\nEl anio %d NO es un anio bisiesto.\n", anio);
+                        }
+
+                        return 0;
+                    }
+                </div>
+            </div>
+            
+            <!-- Problema 5: Salario Neto Semanal -->
+            <div class="problem-card">
+                <h3 class="text-xl font-bold mb-3 text-orange-600">5. Cálculo de Salario Neto Semanal (Horas Extras e Impuesto)</h3>
+                <p class="text-gray-600 mb-4 font-bold">Indicación: Crear una solución que valore el salario neto semanal. Horas $\lt 40$ (tasa normal), Horas $\ge 41$ (tasa $50\%$ superior). Impuesto: $0\%$ si salario bruto $\le 750$ B/., $10\%$ si salario bruto $> 750$ B/.</p>
+                
+                <h4 class="font-semibold mt-4">Pseudocódigo</h4>
+                <div class="code-block">
+                    INICIO
+                        LEER Horas_Trabajadas, Tarifa_Ordinaria
+                        
+                        // 1. Calcular Salario Bruto (con horas extras)
+                        SI Horas_Trabajadas > 40 ENTONCES
+                            Horas_Extra <- Horas_Trabajadas - 40
+                            Salario_Bruto <- (40 * Tarifa_Ordinaria) + (Horas_Extra * Tarifa_Ordinaria * 1.5)
+                        SINO
+                            Salario_Bruto <- Horas_Trabajadas * Tarifa_Ordinaria
+                        FIN SI
+                        
+                        // 2. Calcular Salario Neto (con impuesto)
+                        SI Salario_Bruto > 750 ENTONCES
+                            Impuesto <- Salario_Bruto * 0.10 // 10%
+                            Salario_Neto <- Salario_Bruto - Impuesto
+                        SINO
+                            Salario_Neto <- Salario_Bruto // 0% Impuesto
+                        FIN SI
+
+                        IMPRIMIR "Salario Bruto:", Salario_Bruto, "Balboas."
+                        IMPRIMIR "Salario Neto Semanal:", Salario_Neto, "Balboas."
+                    FIN
+                </div>
+
+                <h4 class="font-semibold mt-4">Diagrama de Flujo</h4>
+                <div class="diagram-placeholder">
+                    <img src="https://github.com/user-attachments/assets/01401aa4-f972-4dbd-bf5a-6fd551342214" alt="Diagrama de flujo para Problema 5" class="w-full h-auto rounded-md"> -->
+                    <!-- Ejemplo: <img src="https://github.com/user-attachments/assets/01401aa4-f972-4dbd-bf5a-6fd551342214" alt="Diagrama de flujo para Problema 5" class="w-full h-auto rounded-md"> -->
+                </div>
+                
+                <h4 class="font-semibold mt-4">Código C (Basado en el Trabajo Entregado)</h4>
+                <div class="code-block">
+                    #include &lt;iostream&gt;
+                    #include &lt;iomanip&gt; // Para usar setprecision
+                    using namespace std;
+                    
+                    int main() {
+                        // Se adapta el codigo para procesar N trabajadores como se observa en el trabajo entregado
+                        int n; 
+                        cout << "Ingrese la cantidad de trabajadores a procesar: ";
+                        cin >> n;
+                    
+                        for (int i = 1; i <= n; i++) {
+                            double horas_trabajadas, tasa_ordinaria;
+                            double horas_extra, salario_bruto, salario_neto;
+                    
+                            cout << "\n--- Trabajador #" << i << " ---\n";
+                            cout << "Ingrese las horas semanales trabajadas: ";
+                            cin >> horas_trabajadas;
+                            cout << "Ingrese la tasa de pago por hora ordinaria (en Balboas): ";
+                            cin >> tasa_ordinaria;
+                    
+                            // Calculo del salario bruto (con horas extras)
+                            if (horas_trabajadas > 40) {
+                                horas_extra = horas_trabajadas - 40;
+                                // Pago Normal + Pago Extra (a 1.5 veces la tasa)
+                                salario_bruto = (40 * tasa_ordinaria) + (horas_extra * (tasa_ordinaria * 1.5));
+                            } else {
+                                horas_extra = 0;
+                                salario_bruto = horas_trabajadas * tasa_ordinaria;
+                            }
+                            
+                            // Calculo del salario neto (con impuesto)
+                            if (salario_bruto > 750) {
+                                // Aplica impuesto del 10% (paga el 90%)
+                                salario_neto = salario_bruto * 0.90; 
+                                cout << "Impuesto Aplicado: 10%\n";
+                            } else {
+                                // No aplica impuesto
+                                salario_neto = salario_bruto; 
+                                cout << "Impuesto Aplicado: 0%\n";
+                            }
+                            
+                            // Mostrar resultados con 2 decimales
+                            cout << fixed << setprecision(2);
+                            cout << "Salario Bruto: " << salario_bruto << " Balboas.\n";
+                            cout << "Salario Neto Semanal: " << salario_neto << " Balboas.\n";
+                        }
+                    
+                        return 0;
+                    }
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Pie de Página (Footer) -->
+    <footer class="bg-gray-800 text-white mt-12 py-4">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <p class="text-xs opacity-75">Documentación del Examen Parcial 1. Asignatura Desarrollo Lógico y Algoritmo.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

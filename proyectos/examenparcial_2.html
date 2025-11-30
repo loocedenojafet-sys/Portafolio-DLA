@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Informe Profesional - Examen Parcial 2</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+
+        /* Estilo base, usa la fuente Inter para un look profesional */
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+        body {
+
+            font-family: 'Inter', sans-serif;
+
+            background-color: #f4f7f9;
+
+        }
+
+        /* Barra lateral para resaltar títulos de sección */
+
+        .section-header {
+
+            border-left: 5px solid #007bff; /* Azul corporativo */
+
+            padding-left: 1rem;
+
+            margin-bottom: 1.5rem;
+
+        }
+
+        /* Bloque de código con fondo oscuro para visibilidad */
+
+        .code-block {
+
+            background-color: #1e1e1e;
+
+            color: #d4d4d4;
+
+            padding: 1rem;
+
+            border-radius: 0.5rem;
+
+            overflow-x: auto;
+
+            white-space: pre;
+
+        }
+
+        /* Estilo para los marcadores de imagen */
+
+        .image-placeholder {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            min-height: 250px;
+
+            background-color: #e0e7ff; /* light blue for tech context */
+
+            border: 2px dashed #4f46e5; /* indigo border */
+
+            color: #1e3a8a; /* dark blue text */
+
+            font-weight: 600;
+
+            text-align: center;
+
+            border-radius: 0.75rem;
+
+            margin-top: 1rem;
+
+            margin-bottom: 1rem;
+
+            padding: 1rem;
+
+            font-size: 1.1rem;
+
+        }
+
+    </style>
+
+</head>
+
+<body class="p-4 sm:p-8">
+
+
+
+    <div class="max-w-6xl mx-auto bg-white shadow-xl rounded-2xl p-6 sm:p-10">
+
+
+
+        <header class="mb-8 border-b pb-4">
+
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-1">Examen Parcial 2 - Proyecto 7</h1>
+
+            <h2 class="text-xl font-semibold text-gray-700">Sistema de Gestión para CHINOS CAFE</h2>
+
+            <div class="mt-4 grid grid-cols-2 gap-4 text-sm text-gray-600">
+
+                <div><span class="font-medium text-gray-800">Estudiante:</span> **[Tu Nombre Completo Aquí]**</div>
+
+                <div><span class="font-medium text-gray-800">Profesor:</span> Napoleón Ibarra</div>
+
+                <div><span class="font-medium text-gray-800">Asignatura:</span> Desarrollo Lógico y Algoritmo</div>
+
+                <div><span class="font-medium text-gray-800">Cédula:</span> **[Tu Número de Cédula Aquí]**</div>
+
+            </div>
+
+        </header>
+
+
+
+        <section class="mb-10">
+
+            <h3 class="text-2xl font-bold text-gray-800 mb-4 section-header">Resumen Ejecutivo</h3>
+
+            <p class="text-gray-700 leading-relaxed">
+
+                Este informe presenta el desarrollo del **Sistema de Información para CHINOS CAFE**, un proyecto que abarca la configuración de infraestructura, el diseño de red, la lógica algorítmica y la implementación en Python. El objetivo es ofrecer una solución centralizada y robusta para la gestión de datos de los establecimientos, permitiendo la comunicación efectiva entre las sucursales y el servidor central de **Linux con MySQL**.
+
+            </p>
+
+        </section>
+
+
+
+        <section class="mb-10">
+
+            <h3 id="servidor" class="text-2xl font-bold text-blue-700 mb-4 section-header">I. Laboratorio de Servidor (Linux + MySQL)</h3>
+
+            <p class="text-gray-700 mb-4">
+
+                La implementación del Servidor de Datos se realizó en una Máquina Virtual utilizando **Ubuntu Server 22.04 LTS**. Esta elección garantiza un entorno robusto y estable para el gestor de bases de datos MySQL, que actúa como el repositorio centralizado de la información del negocio.
+
+            </p>
+
+
+
+            <h4 class="text-xl font-semibold text-gray-800 mt-6 mb-3">1.1. Configuración de la Máquina Virtual</h4>
+
+            <p class="text-gray-700 mb-4">
+
+                La VM se configuró con **2GB de RAM, 2 CPUs virtuales** y una interfaz de red en modo **Adaptador Puente (Bridge)** para asegurar que obtenga una dirección IP dentro de la subred local (192.168.1.x) y sea accesible por los clientes de la red física.
+
+            </p>
+
+            <img src="https://github.com/user-attachments/assets/252b231c-39fd-4c88-b312-d04c71cee212" alt="Pantalla del instalador de Ubuntu Server en VirtualBox mostrando opciones de configuración de red en modo Adaptador Puente y la asignación de 2 GB RAM y 2 CPUs; entorno de máquina virtual, tono informativo" class="w-full h-auto">
+
+            <div class="image-placeholder">Captura de la configuración de la VM (Adaptador Puente)</div>
+
+
+
+            <h4 class="text-xl font-semibold text-gray-800 mt-6 mb-3">1.2. Instalación y Configuración de MySQL Server</h4>
+
+            <p class="text-gray-700 mb-4">
+
+                La instalación de MySQL se realizó mediante `sudo apt install mysql-server`. Se creó un usuario dedicado (`chinos_user`) con permisos específicos para acceder al esquema `chinos_cafe` y se configuró el servidor para aceptar **conexiones remotas** (editando el archivo `mysqld.cnf` y cambiando `bind-address` a `0.0.0.0`).
+
+            </p>
+
+            <img src="https://github.com/user-attachments/assets/7b00aacc-b9c7-44fb-b863-ba88fd027387" alt="Ventana de terminal con sesión de MySQL activa usando el usuario chinos_user que muestra la lista de tablas del esquema chinos_cafe; consola en fondo oscuro, tono informativo" class="w-full h-auto">
+
+            <div class="image-placeholder">Terminal mostrando la ejecución de `mysql -u chinos_user -p` y las tablas de `chinos_cafe`</div>
+
+        </section>
+
+
+
+        <section class="mb-10">
+
+            <h3 id="redes" class="text-2xl font-bold text-blue-700 mb-4 section-header">II. Redes</h3>
+
+            <p class="text-gray-700 mb-4">
+
+                El diseño de la topología de Red LAN en Cisco Packet Tracer simula la interconexión de las dos sucursales con el Servidor de Datos centralizado (VM). Se utilizó un esquema de red clase C, donde todos los clientes y el servidor se encuentran en la misma subred **192.168.1.0/24**.
+
+            </p>
+
+
+
+            <h4 class="text-xl font-semibold text-gray-800 mt-6 mb-3">2.1. Topología de Red LAN (Cisco Packet Tracer)</h4>
+
+            <p class="text-gray-700 mb-4">
+
+                El diagrama incluye un Router (Gateway), un Switch central para la distribución, y los dispositivos finales (Servidor Linux y Laptops de clientes) configurados con IP estática para el servidor (ej: 192.168.1.10) e IP dinámicas para los clientes.
+
+            </p>
+
+            <img src="https://github.com/user-attachments/assets/3d35328b-ad52-403b-8e3b-29a14f58cb89" alt="Diagrama de red en Cisco Packet Tracer con un router gateway, un switch central, un servidor Linux con IP 192.168.1.10 y varias laptops cliente en la subred 192.168.1.0/24; topología LAN, tono técnico" class="w-full h-auto">
+
+            <div class="image-placeholder">Esquema de la Red LAN en Packet Tracer (Servidor, Switch y Clientes)</div>
+
+
+
+            <h4 class="text-xl font-semibold text-gray-800 mt-6 mb-3">2.2. Pruebas de Conectividad</h4>
+
+            <p class="text-gray-700 mb-4">
+
+                Se validó la conectividad utilizando el comando `ping` desde una PC cliente hacia la dirección IP del Servidor de Datos (192.168.1.10). El éxito de esta prueba garantiza que el cliente Python podrá establecer una conexión de red con el servidor MySQL.
+
+            </p>
+
+            <img src="https://github.com/user-attachments/assets/29e917ba-1fd3-40aa-be10-20d490e2fc49" alt="Salida de terminal que muestra resultados de ping hacia 192.168.1.10 con tiempos de respuesta y recuento de paquetes recibidos; confirma conectividad entre cliente y servidor, tono comprobatorio" class="w-full h-auto">
+
+            <div class="image-placeholder">Captura de pantalla de un `ping` exitoso a 192.168.1.10</div>
+
+        </section>
+
+
+
+        <section class="mb-10">
+
+            <h3 id="logica" class="text-2xl font-bold text-blue-700 mb-4 section-header">III. Lógica y Pseudocódigo</h3>
+
+            <p class="text-gray-700 mb-4">
+
+                Desarrollo de la lógica del sistema mediante pseudocódigo, enfocándose en los procesos clave como el menú principal, la gestión de inventario y el carrito de ventas.
+
+            </p>
+
+
+
+            <h4 class="text-xl font-semibold text-gray-800 mt-6 mb-3">3.1. Pseudocódigo del Flujo Principal</h4>
+
+            <p class="text-gray-700 mb-4">
+
+                Estructura del algoritmo principal que gestiona el flujo de la aplicación (Menú Principal).
+
+            </p>
+
+            <pre class="code-block"><code class="text-cyan-400">Algoritmo SistemaGestionChinosCafe
+
+
+
+    // Variables de estado del sistema (Sucursal y usuario)
+
+    Definir ESTABLECIMIENTO_ID Como Entero
+
+    Definir opcion_menu Como Entero
+
+    ESTABLECIMIENTO_ID &lt;- 1 // Sucursal por defecto
+
+
+
+    Repetir
+
+        // Mostrar Menú Principal
+
+        Limpiar Pantalla
+
+        Escribir "=== SISTEMA CHINOS CAFE ==="
+
+        Escribir "Sucursal Actual: ", ESTABLECIMIENTO_ID
+
+        Escribir "1. Iniciar Sesión"
+
+        Escribir "2. Ver Inventario"
+
+        Escribir "3. Carrito de Venta y Cobro"
+
+        Escribir "4. Cambiar Sucursal"
+
+        Escribir "0. Salir"
+
+        Escribir "Seleccione una opción: "
+
+        Leer opcion_menu
+
+
+
+        Segun opcion_menu Hacer
+
+            1: Subproceso_Login() 
+
+            2: Subproceso_VerInventario()
+
+            3: Subproceso_CarritoVenta()
+
+            4: Subproceso_CambiarSucursal()
+
+            0: Escribir "Saliendo del sistema..."
+
+            De Otro Modo: Escribir "Opción inválida."
+
+        FinSegun
+
+        
+
+        Si opcion_menu &lt;&gt; 0 Entonces
+
+            Escribir "Presione una tecla para continuar..."
+
+            Esperar Tecla
+
+        FinSi
+
+    Hasta Que opcion_menu = 0
+
+
+
+FinAlgoritmo</code></pre>
+
+
+
+            <h4 class="text-xl font-semibold text-gray-800 mt-6 mb-3">3.2. Diagrama de Flujo del Proceso de Venta</h4>
+
+            <p class="text-gray-700 mb-4">
+
+                Diagrama que representa la lógica detallada del proceso de venta (`Subproceso_CarritoVenta`), desde la selección de artículos, la actualización de inventario hasta el registro final de la transacción.
+
+            </p>
+
+            <img src="https://github.com/user-attachments/assets/3d073dd5-ffe0-47c4-8631-bd70a0bb0df1" alt="Diagrama de flujo del subproceso CarritoVenta que muestra selección de artículos, verificación de stock, cálculo del total, cobro y registro en la base de datos; incluye decisiones y pasos secuenciales, tono instructivo" class="w-full h-auto">
+
+            <div class="image-placeholder">Diagrama de Flujo del Proceso de Venta (Carrito -> Cobro -> BD)</div>
+
+        </section>
+
+
+
+        <section class="mb-10">
+
+            <h3 id="python" class="text-2xl font-bold text-blue-700 mb-4 section-header">IV. Programación en Python</h3>
+
+            <p class="text-gray-700 mb-4">
+
+                Implementación de la solución en el lenguaje Python. Se incluye el módulo principal con la configuración de la conexión remota a la base de datos MySQL, utilizando la librería `mysql.connector`.
+
+            </p>
+
+
+
+            <h4 class="text-xl font-semibold text-gray-800 mt-6 mb-3">4.1. Conexión a Base de Datos y Módulo Principal en Python</h4>
+
+            <p class="text-gray-700 mb-4">
+
+                Código fuente del archivo principal (`main.py`) con la función del menú y la configuración para la conexión remota a MySQL. **Asegúrate de cambiar `host` a la IP real de tu VM.**
+
+            </p>
+
+            <pre class="code-block"><code class="text-green-400"># python:gestion_chinos_cafe:main.py
+
+# Se asume que la librería 'mysql.connector' está instalada (pip install mysql-connector-python)
+
+import mysql.connector
+
+import os # Usado para limpiar la consola
+
+
+
+# --- CONFIGURACIÓN DE CONEXIÓN (ADAPTAR A TU VM) ---
+
+DB_CONFIG = {
+
+    'user': 'chinos_user',
+
+    'password': 'password_segura',
+
+    'host': '192.168.1.10', # &lt;--- ¡CAMBIAR A LA IP DE TU SERVIDOR LINUX!
+
+    'database': 'chinos_cafe'
+
+}
+
+
+
+# --- FUNCIÓN DE CONEXIÓN ---
+
+def conectar_db():
+
+    """Intenta establecer conexión con la base de datos MySQL."""
+
+    try:
+
+        conn = mysql.connector.connect(**DB_CONFIG)
+
+        print("\n✅ Conexión a MySQL exitosa.")
+
+        return conn
+
+    except mysql.connector.Error as err:
+
+        print(f"\n❌ ERROR al conectar a MySQL. Revise la IP ({DB_CONFIG['host']}) y credenciales.")
+
+        print(f"Detalle del error: {err}")
+
+        return None
+
+
+
+# --- FUNCIONES DE LÓGICA (A IMPLEMENTAR) ---
+
+def Subproceso_Login():
+
+    print("\n--- Implementar Lógica de Login y Validación de Usuario ---")
+
+def Subproceso_VerInventario():
+
+    print("\n--- Implementar Lógica de Consulta y Muestra de Inventario ---")
+
+def Subproceso_CarritoVenta():
+
+    print("\n--- Implementar Lógica de Carrito, Cobro y Transacción ---")
+
+def Subproceso_CambiarSucursal():
+
+    print("\n--- Implementar Lógica de Cambio de Sucursal ---")
+
+    # Esta función debería actualizar la variable ESTABLECIMIENTO_ID
+
+
+
+# --- FUNCIÓN DE MENÚ PRINCIPAL (IMPLEMENTACIÓN DEL PSEUDOCÓDIGO) ---
+
+def main_menu():
+
+    ESTABLECIMIENTO_ID = 1 # Inicializa la sucursal
+
+    opcion_menu = -1
+
+    conn = None
+
+
+
+    while opcion_menu != 0:
+
+        os.system('cls' if os.name == 'nt' else 'clear') # Limpia la consola
+
+        print("\n=== SISTEMA CHINOS CAFE ===")
+
+        print(f"Sucursal Actual: {ESTABLECIMIENTO_ID}")
+
+        print("-" * 30)
+
+        print("1. Iniciar Sesión")
+
+        print("2. Ver Inventario")
+
+        print("3. Carrito de Venta y Cobro")
+
+        print("4. Cambiar Sucursal")
+
+        print("0. Salir")
+
+
+
+        try:
+
+            opcion_menu = int(input("Seleccione una opción: "))
+
+        except ValueError:
+
+            opcion_menu = -1
+
+
+
+        if opcion_menu == 1:
+
+            Subproceso_Login()
+
+        elif opcion_menu == 2:
+
+            Subproceso_VerInventario()
+
+        elif opcion_menu == 3:
+
+            Subproceso_CarritoVenta()
+
+        elif opcion_menu == 4:
+
+            Subproceso_CambiarSucursal()
+
+        elif opcion_menu == 0:
+
+            print("\nSaliendo del sistema...")
+
+        else:
+
+            print("\nOpción inválida.")
+
+
+
+        if opcion_menu != 0:
+
+            input("\nPresione ENTER para continuar...")
+
+
+
+# --- PUNTO DE ENTRADA ---
+
+if __name__ == "__main__":
+
+    # Prueba de la conexión al inicio (Mejorado para informar al usuario)
+
+    print("Iniciando prueba de conexión a la Base de Datos...")
+
+    conn = conectar_db()
+
+    if conn:
+
+        conn.close() # Cierra la conexión de prueba
+
+    
+
+    # Ejecución del menú principal, independientemente del éxito de la conexión
+
+    main_menu()
+
+    
+
+# EOF del archivo main.py</code></pre>
+
+
+
+            <h4 class="text-xl font-semibold text-gray-800 mt-6 mb-3">4.2. Interfaz y Ejecución</h4>
+
+            <p class="text-gray-700 mb-4">
+
+                Captura de la ejecución del programa, mostrando la interfaz de consola al iniciar y el menú principal después de una conexión exitosa a la base de datos MySQL.
+
+            </p>
+
+            <img src="https://github.com/user-attachments/assets/930905eb-0f35-411a-a39f-ea6059557d73" alt="Consola de Python mostrando mensaje Conexión a MySQL exitosa y el menú principal con opciones 1 Iniciar Sesión 2 Ver Inventario 3 Carrito de Venta y Cobro 4 Cambiar Sucursal 0 Salir; interfaz de texto, tono funcional" class="w-full h-auto">
+
+            <div class="image-placeholder">Captura de la consola de Python mostrando la Conexión Exitosa y el Menú Principal</div>
+
+        </section>
+
+
+
+        <footer class="mt-10 pt-6 border-t border-gray-200">
+
+            <h3 class="text-2xl font-bold text-gray-800 mb-4 section-header">Conclusión</h3>
+
+            <p class="text-gray-600 italic">
+
+                El proyecto cumple con los objetivos de integrar la configuración de infraestructura, el diseño de red, la lógica algorítmica y la programación. La implementación garantiza un punto de partida sólido y escalable para el sistema de gestión de CHINOS CAFE, demostrando la capacidad del sistema en Python para **conectarse y operar con una base de datos centralizada en un servidor Linux/MySQL** a través de la red simulada.
+
+            </p>
+
+        </footer>
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>

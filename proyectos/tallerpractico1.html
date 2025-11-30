@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio: Taller Práctico 1 - Investigación</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilo base, usa la fuente Inter para un look profesional */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Gris muy claro para el fondo */
+        }
+        /* Barra lateral para resaltar títulos de sección (Azul Corporativo) */
+        .section-header {
+            border-left: 6px solid #10b981; /* Verde esmeralda para un toque tecnológico */
+            padding-left: 1.25rem;
+            margin-bottom: 2rem;
+        }
+        /* Estilo para bloques de código in-line o pequeños */
+        .code-inline {
+            background-color: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-weight: 600;
+        }
+        /* Bloque de código con fondo oscuro para visibilidad */
+        .code-block {
+            background-color: #1e293b; /* Dark Slate Blue */
+            color: #f8fafc;
+            padding: 1.25rem;
+            border-radius: 0.75rem;
+            overflow-x: auto;
+            white-space: pre;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        /* Marcador de imagen para las partes pendientes */
+        .image-placeholder {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px;
+            background-color: #f0f9ff;
+            border: 3px dashed #38bdf8; /* Light Blue */
+            color: #0369a1;
+            font-weight: 600;
+            text-align: center;
+            border-radius: 0.75rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding: 2rem;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body class="p-4 sm:p-10">
+
+    <div class="max-w-7xl mx-auto bg-white shadow-2xl rounded-xl p-8 sm:p-12">
+
+        <header class="mb-10 border-b-4 border-emerald-500 pb-6">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-2">Taller Práctico 1: Fundamentos Algorítmicos y Bases de Datos</h1>
+            <h2 class="text-xl sm:text-2xl font-semibold text-gray-600">Investigación, Desarrollo y Prototipo (Asignatura: Desarrollo Lógico y Algoritmo)</h2>
+            <div class="mt-6 grid grid-cols-2 gap-4 text-base text-gray-500">
+                <div><span class="font-medium text-gray-800">Estudiante:</span> [Tu Nombre Aquí]</div>
+                <div><span class="font-medium text-gray-800">Cédula:</span> [Tu Cédula Aquí]</div>
+            </div>
+        </header>
+
+        <section class="mb-12">
+            <h3 class="text-3xl font-bold text-gray-800 section-header">🔎 I. Investigación: Búsqueda, Ordenamiento y MySQL</h3>
+            <p class="text-gray-700 mb-6">
+                Este segmento cubre los conceptos fundamentales de búsqueda y ordenamiento de arreglos, así como la infraestructura y conectividad de bases de datos utilizando MySQL y Python.
+            </p>
+
+            <div class="mt-8">
+                <h4 class="text-2xl font-bold text-emerald-600 mb-3">1. Procedimientos de Arreglos</h4>
+
+                <h5 class="text-xl font-semibold text-gray-800 mt-4 mb-2">1.1. Búsqueda Secuencial (Búsqueda Lineal)</h5>
+                <p class="text-gray-700 mb-2">
+                    La **búsqueda secuencial** es el algoritmo más fundamental. [cite_start]Examina cada elemento de un arreglo de manera ordenada, comenzando desde la primera posición, comparando sistemáticamente el valor buscado con cada elemento hasta encontrarlo o llegar al final de la estructura[cite: 74, 75].
+                </p>
+                <p class="text-gray-700 mb-4">
+                    [cite_start]Su principal ventaja es que **no requiere que el arreglo esté previamente ordenado** [cite: 77][cite_start], pero su principal limitación es la **complejidad temporal $O(n)$**, que lo hace ineficiente para arreglos de gran tamaño[cite: 79].
+                </p>
+
+                <h6 class="text-lg font-bold text-gray-700 mt-4">Pseudocódigo:</h6>
+                <pre class="code-block"><code class="language-pseudocode text-cyan-400">PROCEDIMIENTO BUSQUEDA_SECUENCIAL(A, n, clave)
+    PARA I DESDE 0 HASTA n - 1 HACER
+        SI $A[i]$ = clave ENTONCES
+            RETORNAR I // Posición encontrada
+        FIN SI
+    FIN PARA
+    RETORNAR -1 // No encontrado
+FIN PROCEDIMIENTO</code></pre>
+
+                <h6 class="text-lg font-bold text-gray-700 mt-4">Ejemplo (Python y Simulación):</h6>
+                <pre class="code-block"><code class="language-python text-yellow-400"># Ejemplo de uso
+arreglo = [5, 3, 8, 1, 9]
+clave = 1
+resultado = busqueda_secuencial(arreglo, clave)
+
+# Simulación: El valor '1' se encuentra en la posición 3.
+# La función itera por [5], [3], [8], y finalmente encuentra [1] en el índice 3.
+# Salida esperada: Elemento encontrado en la posición: 3</code></pre>
+
+                <h5 class="text-xl font-semibold text-gray-800 mt-6 mb-2">1.2. Push Down (Heapify)</h5>
+                <p class="text-gray-700 mb-4">
+                    [cite_start]El método **Push Down** (también llamado *Sift Down* o *Heapify*) es el procedimiento central del algoritmo Heap Sort[cite: 114]. [cite_start]Su función es descender un elemento dentro de una estructura de *heap* (montículo) hasta posicionarlo correctamente, garantizando que el **nodo padre sea mayor o menor que sus hijos** (propiedad del heap)[cite: 115, 116].
+                </p>
+                <p class="text-gray-700 mb-4">
+                    [cite_start]Su **complejidad temporal es $O(n \log n)$**[cite: 117], lo que lo hace muy eficiente para grandes volúmenes de datos. [cite_start]Además, requiere **memoria $O(1)$ adicional**[cite: 121].
+                </p>
+
+            </div>
+
+            <hr class="my-8">
+
+            <div class="mt-8">
+                <h4 class="text-2xl font-bold text-emerald-600 mb-3">2. Base de Datos MySQL y Conectividad</h4>
+
+                <h5 class="text-xl font-semibold text-gray-800 mt-4 mb-2">Definición de MySQL</h5>
+                <p class="text-gray-700 mb-4">
+                    [cite_start]**MySQL** es un **Sistema de Gestión de Bases de Datos Relacional (RDBMS)** de código abierto que utiliza **Structured Query Language (SQL)** para manipular información[cite: 163]. [cite_start]Organiza los datos en tablas con filas y columnas, donde las relaciones se gestionan mediante claves foráneas[cite: 166].
+                </p>
+
+                <h5 class="text-xl font-semibold text-gray-800 mt-4 mb-2">Requerimientos de Instalación</h5>
+                <p class="text-gray-700 mb-2">
+                    [cite_start]MySQL puede ser instalado en sistemas operativos como **Windows, Linux o macOS**[cite: 170]. Los requisitos mínimos típicos incluyen:
+                </p>
+                <ul class="list-disc list-inside ml-4 text-gray-700 mb-4">
+                    [cite_start]<li>**Sistema Operativo:** Cualquiera compatible (Windows, Linux, macOS)[cite: 170].</li>
+                    [cite_start]<li>**Disco:** Mínimo 500 MB para el espacio de datos[cite: 170].</li>
+                    [cite_start]<li>**RAM:** Mínimo 1 GB de memoria operativa[cite: 170].</li>
+                    [cite_start]<li>**Puerto:** El puerto de conexión por defecto es el <span class="code-inline">3306</span>[cite: 170].</li>
+                </ul>
+
+                <h5 class="text-xl font-semibold text-gray-800 mt-4 mb-2">Conexión PYTHON-MySQL: ¿Qué se requiere?</h5>
+                <p class="text-gray-700 mb-2">
+                    Para lograr una conexión efectiva entre Python y MySQL se requiere el uso de un **conector** (una librería) que permita al código Python interactuar con el servidor de base de datos.
+                </p>
+                <p class="text-gray-700 mb-4">
+                    El procedimiento consiste en dos pasos principales:
+                </p>
+                <ol class="list-decimal list-inside ml-4 text-gray-700 mb-4">
+                    [cite_start]<li>**Instalación del Conector:** Instalar la librería <span class="code-inline">mysql-connector-python</span> mediante el gestor de paquetes <span class="code-inline">pip</span>[cite: 173].</li>
+                    [cite_start]<li>**Establecimiento de la Conexión:** Utilizar el conector dentro del script Python para pasar los parámetros de conexión al servidor MySQL (host, usuario, contraseña, base de datos)[cite: 175, 177].</li>
+                </ol>
+
+                <h6 class="text-lg font-bold text-gray-700 mt-4">Ejemplo de Código:</h6>
+                [cite_start]<pre class="code-block"><code class="language-python text-yellow-400"># 1. Instalación: pip install mysql-connector-python [cite: 173]
+import mysql.connector
+
+# 2. Conexión y credenciales
+conexion = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="1234",
+    database="ejemplo_db"
+)
+# [cite_start]Crear un objeto cursor para ejecutar comandos SQL [cite: 183]
+cursor = conexion.cursor() 
+# ... operaciones SQL ...
+[cite_start]conexion.commit() # Confirmar cambios [cite: 191]
+[cite_start]conexion.close() # Cerrar conexión [cite: 197]</code></pre>
+
+
+                <h5 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Replicación en una Base de Datos</h5>
+                <p class="text-gray-700 mb-4">
+                    [cite_start]La **replicación** es un mecanismo que **copia datos de una base principal (maestro) hacia una o varias bases secundarias (réplicas)**, manteniéndolas sincronizadas[cite: 233]. [cite_start]Es fundamental para garantizar **alta disponibilidad**, **confiabilidad** y **balanceo de carga** en entornos empresariales[cite: 232, 252].
+                </p>
+                <p class="text-gray-700 mb-4">
+                    Existen dos tipos principales:
+                </p>
+                <ul class="list-disc list-inside ml-4 text-gray-700 mb-4">
+                    [cite_start]<li>**Replicación Síncrona:** La réplica se actualiza simultáneamente con los cambios en el maestro, lo que garantiza la **consistencia absoluta** pero puede aumentar la latencia[cite: 235, 240, 246].</li>
+                    [cite_start]<li>**Replicación Asíncrona:** Existe un pequeño retraso entre el maestro y la réplica, lo que ofrece un **mejor rendimiento (velocidad)**, aunque con la posibilidad de inconsistencias temporales[cite: 236, 243, 244].</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section class="mb-12 border-t pt-8">
+            <h3 class="text-3xl font-bold text-gray-800 section-header">🛠️ II. Laboratorio (Instalación de MySQL)</h3>
+            <p class="text-gray-700 mb-4">
+                Esta sección requiere la documentación gráfica de la instalación y configuración de MySQL en el equipo de producción, tal como se solicitó en el procedimiento del taller.
+            </p>
+            <div class="image-placeholder">
+                [Espacio para la Evidencia 1]: Captura de pantalla de la instalación de MySQL.
+            </div>
+            <div class="image-placeholder">
+                [Espacio para la Evidencia 2]: Terminal o herramienta de gestión mostrando la Base de Datos creada.
+            </div>
+        </section>
+        
+        <section class="mb-12 border-t pt-8">
+            <h3 class="text-3xl font-bold text-gray-800 section-header">💻 III. Desarrollo Prototipo y Red LAN</h3>
+            <p class="text-gray-700 mb-4">
+                Esta sección requiere el prototipo de pseudocódigo, el programa en Python y el diseño de la Red LAN en Packet Tracer para el caso de estudio de la empresa XYZ (alquiler de equipos).
+            </p>
+            <h4 class="text-2xl font-bold text-blue-600 mt-6 mb-3">3.1. Prototipo y Código Python (Alquiler de Equipos)</h4>
+            <div class="image-placeholder">
+                [Espacio para la Evidencia 3]: Pseudocódigo del Sistema de Alquiler de Equipos.
+            </div>
+            <div class="image-placeholder">
+                [Espacio para la Evidencia 4]: Código Python del prototipo en ejecución.
+            </div>
+
+            <h4 class="text-2xl font-bold text-blue-600 mt-6 mb-3">3.2. Diagrama de Red LAN (Packet Tracer)</h4>
+            <div class="image-placeholder">
+                [Espacio para la Evidencia 5]: Diagrama de Red LAN en Cisco Packet Tracer (Caso XYZ).
+            </div>
+        </section>
+
+
+        <footer class="mt-10 pt-6 border-t border-gray-300">
+            <h4 class="text-xl font-bold text-gray-800 mb-2">Referencias</h4>
+            <ul class="text-sm text-gray-600 list-disc list-inside ml-4">
+                [cite_start]<li>Documentación oficial de Python: https://docs.python.org [cite: 278]</li>
+                [cite_start]<li>Documentación de MySQL: https://dev.mysql.com/doc [cite: 278]</li>
+                [cite_start]<li>Tutorial de Heap Sort: https://www.geeksforgeeks.org/heap-sort/ [cite: 279]</li>
+                [cite_start]<li>Conector Python-MySQL: https://pypi.org/project/mysql-connector-python/ [cite: 280]</li>
+            </ul>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

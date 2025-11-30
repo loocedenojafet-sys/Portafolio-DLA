@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 3 | Ejercicio Práctico 1 - Estructuras Condicionales</title>
+    <!-- Carga de Tailwind CSS y fuente Inter -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #eef2f5;
+        }
+        .section-header {
+            border-left: 4px solid #f59e0b; /* Amarillo ámbar para el ejercicio práctico */
+            padding-left: 1rem;
+        }
+        .code-block {
+            background-color: #1f2937; /* Gris oscuro para código */
+            color: #d1d5db;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+        .problem-card {
+            background-color: #ffffff;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            border-top: 5px solid #f59e0b;
+        }
+        .diagram-placeholder {
+            min-height: 150px;
+            background-color: #f3f4f6;
+            border: 2px dashed #9ca3af;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.5rem;
+            color: #6b7280;
+            font-style: italic;
+            margin-top: 1rem;
+        }
+        .formula-info {
+            background-color: #e0f2fe; /* blue-100 */
+            border-left: 4px solid #3b82f6; /* blue-500 */
+            color: #1e40af; /* blue-900 */
+            padding: 0.75rem;
+            border-radius: 0.375rem;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Contenedor Principal -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+        <!-- Botón de Regreso -->
+        <a href="../index.html" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition duration-300 mb-6 font-medium">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            Volver al Índice de Proyectos
+        </a>
+
+        <!-- Encabezado del Proyecto -->
+        <header class="bg-white rounded-xl p-6 shadow-lg mb-8">
+            <span class="text-sm font-semibold text-amber-500 uppercase">Proyecto 3 / Ejercicio Práctico 1</span>
+            <h1 class="text-4xl font-bold mt-2 text-gray-900">Ejercicio Práctico 1: Estructuras Secuenciales y Condicionales</h1>
+            <p class="mt-2 text-lg text-gray-600">Documentación de la resolución de problemas enfocados en la aplicación de Estructuras Condicionales y Secuenciales con Pseudocódigo, Diagramas de Flujo y Codificación en C.</p>
+        </header>
+        
+        <!-- 1. Descripción del Ejercicio -->
+        <section class="mb-8">
+            <h2 class="section-header text-2xl font-semibold mb-4 text-amber-700">Objetivo y Metodología de la Asignación</h2>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <p class="mb-3">
+                    Este ejercicio práctico introduce la necesidad de utilizar la lógica condicional (IF/ELSE) además de las estructuras secuenciales, para tomar decisiones y presentar resultados específicos.
+                </p>
+                <h3 class="font-bold mt-4">Criterios de Evaluación:</h3>
+                <ul class="list-disc list-inside ml-4 text-gray-600 space-y-1">
+                    <li>Desarrollo: 70%</li>
+                    <li>Sustentación: 15%</li>
+                    <li>Puntualidad: 15%</li>
+                </ul>
+                <p class="mt-4 text-sm text-gray-500">
+                    Se solicitó la entrega de Pseudocódigo, Diagrama de Flujo (usando software de ofimática o Dia) y el Código C.
+                </p>
+            </div>
+        </section>
+
+        <!-- 2. Desarrollo de Problemas -->
+        <section>
+            <h2 class="section-header text-2xl font-semibold mb-6 text-amber-700">Problemas Resueltos</h2>
+
+            <!-- Problema 1: Consumo de Combustible y Velocidad Media -->
+            <div class="problem-card">
+                <h3 class="text-xl font-bold mb-3 text-amber-600">1. Cálculo de Rendimiento de Viaje</h3>
+                <p class="text-gray-600 mb-4 font-bold">Indicación Real: Escriba un programa que pida el total de kilómetros recorridos, el precio del combustible (diésel, gasolina), el dinero de combustible gastado en el viaje y el tiempo que se ha tardado (en horas y minutos), y que calcule:</p>
+                <ul class="list-disc list-inside ml-4 text-gray-600 space-y-1">
+                    <li>Consumo de combustible (en litros y dólar) por cada cien kilómetros y/o metros.</li>
+                    <li>Consumo de combustible (en litros y dólar) por cada kilómetro y/o metros.</li>
+                    <li>Velocidad media (en $km/h$ y $m/s$).</li>
+                </ul>
+                
+                <h4 class="font-semibold mt-4">Pseudocódigo</h4>
+                <div class="code-block">
+                    INICIO
+                        LEER Kilometros_Totales, Precio_x_Litro, Dinero_Gastado, Horas, Minutos
+                        
+                        // CÁLCULOS
+                        Litros_Gastados <- Dinero_Gastado / Precio_x_Litro
+                        Tiempo_Total_H <- Horas + (Minutos / 60.0) // Tiempo total en horas
+
+                        // Consumo
+                        Consumo_L_100km <- (Litros_Gastados / Kilometros_Totales) * 100
+                        Consumo_D_100km <- (Dinero_Gastado / Kilometros_Totales) * 100
+                        
+                        // Velocidad
+                        Velocidad_Km_H <- Kilometros_Totales / Tiempo_Total_H
+                        Velocidad_M_S <- (Kilometros_Totales * 1000.0) / (Tiempo_Total_H * 3600.0)
+
+                        // IMPRIMIR RESULTADOS
+                        IMPRIMIR "Consumo Litros por 100 km:", Consumo_L_100km
+                        IMPRIMIR "Consumo Dólar por 100 km:", Consumo_D_100km
+                        IMPRIMIR "Velocidad Media (km/h):", Velocidad_Km_H
+                        IMPRIMIR "Velocidad Media (m/s):", Velocidad_M_S
+                    FIN
+                </div>
+
+                <h4 class="font-semibold mt-4">Diagrama de Flujo</h4>
+                <div class="diagram-placeholder">
+                    <img src="https://github.com/user-attachments/assets/7dba2ac1-a679-4e3e-abe2-9e3fb9ccd2ba" alt="Diagrama de flujo para Problema 1" class="w-full h-auto rounded-md">
+                    <!-- Ejemplo: <img src="https://github.com/user-attachments/assets/7dba2ac1-a679-4e3e-abe2-9e3fb9ccd2ba" alt="Diagrama de flujo para Problema 1" class="w-full h-auto rounded-md"> -->
+                </div>
+                
+                <h4 class="font-semibold mt-4">Código C</h4>
+                <div class="code-block">
+                    #include &lt;stdio.h&gt;
+                    
+                    int main() {
+                        float km_totales, precio_x_litro, dinero_gastado;
+                        int horas, minutos;
+                        float litros_gastados, tiempo_total_h;
+                        float consumo_l_100km, consumo_d_100km, velocidad_km_h, velocidad_m_s;
+                        
+                        // Lectura de entradas
+                        printf("Ingrese total de kilometros recorridos: ");
+                        scanf("%f", &km_totales);
+                        
+                        printf("Ingrese precio del combustible por litro (B/.): ");
+                        scanf("%f", &precio_x_litro);
+                        
+                        printf("Ingrese dinero de combustible gastado (B/.): ");
+                        scanf("%f", &dinero_gastado);
+
+                        printf("Ingrese tiempo tardado (Horas y Minutos):\n");
+                        printf("Horas: ");
+                        scanf("%d", &horas);
+                        printf("Minutos: ");
+                        scanf("%d", &minutos);
+                        
+                        // 1. Litros gastados
+                        litros_gastados = dinero_gastado / precio_x_litro;
+
+                        // 2. Tiempo total en horas (para la velocidad)
+                        tiempo_total_h = horas + (minutos / 60.0);
+
+                        // 3. Consumo por cada cien kilómetros (litros y dólar)
+                        consumo_l_100km = (litros_gastados / km_totales) * 100.0;
+                        consumo_d_100km = (dinero_gastado / km_totales) * 100.0;
+
+                        // Consumo por cada kilómetro (solo imprimir el valor base ya que 100km es suficiente)
+                        // float consumo_l_x_km = litros_gastados / km_totales;
+                        // float consumo_d_x_km = dinero_gastado / km_totales;
+
+                        // 4. Velocidad media
+                        velocidad_km_h = km_totales / tiempo_total_h;
+                        velocidad_m_s = (km_totales * 1000.0) / (tiempo_total_h * 3600.0);
+                        
+                        // Impresión de resultados
+                        printf("\n--- Resultados del Viaje ---\n");
+                        printf("Consumo de Litros por 100 km: %.2f L\n", consumo_l_100km);
+                        printf("Consumo en Balboas por 100 km: B/. %.2f\n", consumo_d_100km);
+                        printf("Velocidad Media: %.2f km/h\n", velocidad_km_h);
+                        printf("Velocidad Media: %.2f m/s\n", velocidad_m_s);
+                        
+                        return 0;
+                    }
+                </div>
+            </div>
+
+            <!-- Problema 2: Límite de Crédito -->
+            <div class="problem-card">
+                <h3 class="text-xl font-bold mb-3 text-amber-600">2. Determinación de Límite de Crédito Excedido</h3>
+                <p class="text-gray-600 mb-4 font-bold">Indicación Real: Desarrolle un código que calcule y muestre el nuevo saldo de un cliente. Si este nuevo saldo excede el límite de crédito permitido, su desarrollo debe mostrar el mensaje: "Límite de crédito excedido". Para un cliente se tienen los siguientes datos: número de cuenta, saldo al inicio del mes, total de todos los artículos cargados por el cliente en el mes, total de todos los créditos aplicados a la cuenta del cliente en el mes, y el límite de crédito permitido.</p>
+                
+                <h4 class="font-semibold mt-4">Pseudocódigo</h4>
+                <div class="code-block">
+                    INICIO
+                        LEER Num_Cuenta, Saldo_Inicial, Cargos, Creditos, Limite_Credito
+                        
+                        Nuevo_Saldo <- Saldo_Inicial + Cargos - Creditos
+
+                        IMPRIMIR "Número de Cuenta:", Num_Cuenta
+                        IMPRIMIR "Nuevo Saldo:", Nuevo_Saldo
+                        
+                        SI Nuevo_Saldo > Limite_Credito ENTONCES
+                            IMPRIMIR "¡Límite de crédito excedido!"
+                        FIN SI
+                    FIN
+                </div>
+
+                <h4 class="font-semibold mt-4">Diagrama de Flujo</h4>
+                <div class="diagram-placeholder">
+                    <img src="https://github.com/user-attachments/assets/2c40d88d-07f7-4b4d-aefa-23628b8a8388" alt="Diagrama de flujo para Problema 2" class="w-full h-auto rounded-md">
+                    <!-- Ejemplo: <img src="https://github.com/user-attachments/assets/2c40d88d-07f7-4b4d-aefa-23628b8a8388" alt="Diagrama de flujo para Problema 2" class="w-full h-auto rounded-md"> -->
+                </div>
+                
+                <h4 class="font-semibold mt-4">Código C</h4>
+                <div class="code-block">
+                    #include &lt;stdio.h&gt;
+                    
+                    int main() {
+                        int num_cuenta;
+                        float saldo_inicial, cargos, creditos, limite_credito, nuevo_saldo;
+                        
+                        // Lectura de entradas
+                        printf("Ingrese el numero de cuenta: ");
+                        scanf("%d", &num_cuenta);
+                        printf("Ingrese el saldo al inicio del mes: ");
+                        scanf("%f", &saldo_inicial);
+                        printf("Ingrese el total de cargos del mes: ");
+                        scanf("%f", &cargos);
+                        printf("Ingrese el total de creditos aplicados: ");
+                        scanf("%f", &creditos);
+                        printf("Ingrese el limite de credito permitido: ");
+                        scanf("%f", &limite_credito);
+                        
+                        // Cálculo del nuevo saldo
+                        nuevo_saldo = saldo_inicial + cargos - creditos;
+                        
+                        // Mostrar resultados
+                        printf("\n--- Resumen de Cuenta ---\n");
+                        printf("Cuenta No. %d\n", num_cuenta);
+                        printf("Nuevo Saldo: B/. %.2f\n", nuevo_saldo);
+                        
+                        // Estructura Condicional: Verificar si excede el límite
+                        if (nuevo_saldo > limite_credito) {
+                            printf("¡Límite de crédito excedido!\n");
+                        }
+                        
+                        return 0;
+                    }
+                </div>
+            </div>
+
+            <!-- Problema 3: Sueldo Bruto con Horas Extras -->
+            <div class="problem-card">
+                <h3 class="text-xl font-bold mb-3 text-amber-600">3. Cálculo de Sueldo Bruto (Horas Extras)</h3>
+                <p class="text-gray-600 mb-4 font-bold">Indicación Real: Desarrolle un código que determine el sueldo bruto para cada empleado (nombre completo, posición). La empresa paga la cuota normal en las primeras 40 horas, y cuota y media en todas las horas trabajadas que excedan de 40. Usted recibe el nombre del empleado, el número de horas que trabajó y la tarifa por hora. Su desarrollo debe recibir como entrada esta información para cada ejecución, para luego determinar y mostrar el sueldo bruto de cada trabajador.</p>
+                
+                <h4 class="font-semibold mt-4">Pseudocódigo</h4>
+                <div class="code-block">
+                    INICIO
+                        LEER Nombre_Empleado, Horas_Trabajadas, Tarifa_x_Hora
+                        
+                        SI Horas_Trabajadas <= 40 ENTONCES
+                            Sueldo_Bruto <- Horas_Trabajadas * Tarifa_x_Hora
+                        SINO
+                            Horas_Extra <- Horas_Trabajadas - 40
+                            Pago_Normal <- 40 * Tarifa_x_Hora
+                            Pago_Extra <- Horas_Extra * Tarifa_x_Hora * 1.5 // Cuota y media
+                            Sueldo_Bruto <- Pago_Normal + Pago_Extra
+                        FIN SI
+
+                        IMPRIMIR "Empleado:", Nombre_Empleado
+                        IMPRIMIR "Sueldo Bruto:", Sueldo_Bruto
+                    FIN
+                </div>
+
+                <h4 class="font-semibold mt-4">Diagrama de Flujo</h4>
+                <div class="diagram-placeholder">
+                   <img src="https://github.com/user-attachments/assets/34ca235d-18d4-4051-8e1d-c23709edf9ca" alt="Diagrama de flujo para Problema 3" class="w-full h-auto rounded-md">
+                </div> 
+                <h4 class="font-semibold mt-4">Código C</h4>
+                <div class="code-block">
+                    #include &lt;stdio.h&gt;
+                    #include &lt;string.h&gt;
+                    
+                    int main() {
+                        char nombre[100];
+                        float horas_trabajadas, tarifa_x_hora, sueldo_bruto;
+                        const int HORAS_NORMALES = 40;
+                        const float TARIFA_EXTRA = 1.5;
+
+                        // Lectura de entradas
+                        printf("Ingrese nombre completo del empleado: ");
+                        // Permite leer nombres con espacios
+                        scanf("%[^\n]%*c", nombre); 
+                        
+                        printf("Ingrese horas trabajadas en la semana: ");
+                        scanf("%f", &horas_trabajadas);
+                        
+                        printf("Ingrese tarifa por hora (B/.): ");
+                        scanf("%f", &tarifa_x_hora);
+                        
+                        // Estructura Condicional para calcular el sueldo
+                        if (horas_trabajadas <= HORAS_NORMALES) {
+                            // Sin horas extras
+                            sueldo_bruto = horas_trabajadas * tarifa_x_hora;
+                        } else {
+                            // Con horas extras
+                            float horas_extra = horas_trabajadas - HORAS_NORMALES;
+                            float pago_normal = HORAS_NORMALES * tarifa_x_hora;
+                            float pago_extra = horas_extra * tarifa_x_hora * TARIFA_EXTRA;
+                            
+                            sueldo_bruto = pago_normal + pago_extra;
+                        }
+
+                        // Mostrar resultados
+                        printf("\n--- Reporte de Sueldo ---\n");
+                        printf("Empleado: %s\n", nombre);
+                        printf("Horas trabajadas: %.2f\n", horas_trabajadas);
+                        printf("Sueldo Bruto Total: B/. %.2f\n", sueldo_bruto);
+                        
+                        return 0;
+                    }
+                </div>
+            </div>
+
+            <!-- Problema 4: Nota Final y Determinar Pase -->
+            <div class="problem-card">
+                <h3 class="text-xl font-bold mb-3 text-amber-600">4. Cálculo de Nota Final y Resultado del Curso</h3>
+                <p class="text-gray-600 mb-4 font-bold">Indicación Real: Escriba un programa que permita realizar los cálculos de una nota final de un estudiante universitario. Debe presentar el nombre, las notas por porcentaje, a su vez la final decir sí logra el pase del curso. El pase se logra con una nota de 71 o más.</p>
+                
+                <div class="formula-info">
+                    Nota: La solución se basa en la fórmula de ponderación 40%/30%/30% observada en el desarrollo de su ejercicio, asumiendo que: Parciales (40%), Proyecto (30%), Examen Final (30%).
+                </div>
+
+                <h4 class="font-semibold mt-4">Pseudocódigo</h4>
+                <div class="code-block">
+                    INICIO
+                        LEER Nombre
+                        LEER Nota_Parcial, Nota_Proyecto, Nota_Examen
+                        
+                        // Cálculo de la nota final (Ponderación 40-30-30)
+                        Nota_Final <- (Nota_Parcial * 0.40) + (Nota_Proyecto * 0.30) + (Nota_Examen * 0.30)
+                        
+                        IMPRIMIR "Estudiante: ", Nombre
+                        IMPRIMIR "Nota final: ", Nota_Final
+                        
+                        // Estructura Condicional: Determinar si logra el pase (>= 71)
+                        SI Nota_Final >= 71 ENTONCES
+                            IMPRIMIR "Resultado: APROBADO"
+                        SINO
+                            IMPRIMIR "Resultado: REPROBADO"
+                        FIN SI
+                    FIN
+                </div>
+
+                <h4 class="font-semibold mt-4">Diagrama de Flujo</h4>
+                <div class="diagram-placeholder">
+                   <img src="https://github.com/user-attachments/assets/478f9f39-ba4f-419c-a078-6783b7e38d4d" alt="Diagrama de flujo para Problema 4" class="w-full h-auto rounded-md">
+                    <!-- Ejemplo: <img src="https://github.com/user-attachments/assets/478f9f39-ba4f-419c-a078-6783b7e38d4d" alt="Diagrama de flujo para Problema 4" class="w-full h-auto rounded-md"> -->
+                </div>
+                
+                <h4 class="font-semibold mt-4">Código C</h4>
+                <div class="code-block">
+                    #include &lt;stdio.h&gt;
+                    
+                    int main() {
+                        char nombre[50];
+                        float nota_parcial, nota_proyecto, nota_examen, nota_final;
+                        const int NOTA_PASE = 71;
+
+                        // Lectura de entradas
+                        printf("Ingrese nombre del estudiante: ");
+                        // Leemos el nombre. %*c consume el '\n' remanente
+                        scanf("%[^\n]%*c", nombre); 
+
+                        printf("Ingrese nota de parciales (40%%): ");
+                        scanf("%f", &nota_parcial);
+
+                        printf("Ingrese nota de proyecto (30%%): ");
+                        scanf("%f", &nota_proyecto);
+
+                        printf("Ingrese nota de examen final (30%%): ");
+                        scanf("%f", &nota_examen);
+
+                        // Cálculo de la nota final (40% + 30% + 30%)
+                        nota_final = (nota_parcial * 0.40) + (nota_proyecto * 0.30) + (nota_examen * 0.30);
+
+                        // Impresión de resultados
+                        printf("\n--- Reporte de Notas ---\n");
+                        printf("Estudiante: %s\n", nombre);
+                        printf("Nota final: %.2f\n", nota_final);
+
+                        // Estructura Condicional: Verificar si aprueba
+                        if (nota_final >= NOTA_PASE) {
+                            printf("Resultado: APROBADO\n");
+                        } else {
+                            printf("Resultado: REPROBADO\n");
+                        }
+
+                        return 0;
+                    }
+                }
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Pie de Página (Footer) -->
+    <footer class="bg-gray-800 text-white mt-12 py-4">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <p class="text-xs opacity-75">Documentación del Ejercicio Práctico 1. Asignatura Desarrollo Lógico y Algoritmo.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
