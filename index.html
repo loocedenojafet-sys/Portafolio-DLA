@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - Desarrollo Lógico y Algorítmico</title>
-    <!-- Carga de Tailwind CSS para un diseño moderno y responsivo -->
+    <title>Mi Portafolio - Desarrollo Lógico y Algorítmico</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Estilos personalizados para la fuente y el scroll suave */
+        /* Estilos personalizados */
         body {
             font-family: 'Inter', sans-serif;
             scroll-behavior: smooth;
@@ -18,20 +17,25 @@
             border-left: 4px solid #3b82f6; /* Azul de Tailwind 500 */
             padding-left: 1rem;
         }
+        .card-shadow {
+            /* Sombra personalizada para las tarjetas de proyecto */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        .card-shadow:hover {
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.2); /* Sombra azul al pasar el ratón */
+        }
     </style>
 </head>
 <body class="text-gray-800">
 
-    <!-- 1. Barra de Navegación (Header) -->
     <header class="bg-white shadow-md sticky top-0 z-10">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <div class="text-2xl font-bold text-blue-600">
                 Mi Portafolio DLA
             </div>
-            <!-- Menú de navegación principal -->
             <div class="space-x-4">
                 <a href="#inicio" class="text-gray-600 hover:text-blue-600 transition duration-300">Inicio</a>
-                <a href="#proyectos" class="text-gray-600 hover:text-blue-600 transition duration-300">Proyectos</a>
+                <a href="#proyectos" class="text-gray-600 hover:text-blue-600 transition duration-300">Asignaciones</a>
                 <a href="#perfil" class="text-gray-600 hover:text-blue-600 transition duration-300">Perfil</a>
             </div>
         </nav>
@@ -39,83 +43,85 @@
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
-        <!-- 2. Sección de Bienvenida (Inicio) -->
         <section id="inicio" class="bg-blue-600 text-white rounded-xl p-10 mb-12 shadow-lg md:flex items-center justify-between">
             <div class="md:w-3/4">
                 <h1 class="text-4xl sm:text-5xl font-extrabold mb-3">
                     Portafolio de Desarrollo Lógico y Algorítmico
                 </h1>
                 <p class="text-xl opacity-90">
-                    Documentación de las asignaciones y proyectos clave del curso, demostrando la aplicación práctica de estructuras de control, funciones y algoritmos para la resolución de problemas.
+                    Documentación de las asignaciones y proyectos clave del curso, demostrando la aplicación práctica de estructuras de control, funciones y la integración con bases de datos.
                 </p>
             </div>
             <div class="md:w-1/4 flex justify-center mt-6 md:mt-0">
-                <!-- Icono Placeholder para la sección de inicio -->
-                <svg class="w-24 h-24 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 11h2m-2 4h2m6-4h2m-2 4h2M11 7h2m-2 10h2m-2-6h2m-2 4h2M11 7V5m0 2v4m0 4v2m-6-4H7m0-4h4m4 4h2m-6 0h-4m-6-4H5m0-4h2m14 0h-2m-2 4h-4m-4 0h-2m-2 4h-4m12 0h-2m-2 4h-4m4-4h4"></path></svg>
+                <svg class="w-24 h-24 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
             </div>
         </section>
 
-        <!-- 3. Sección de Proyectos (Índice de Asignaciones) -->
         <section id="proyectos" class="mb-12">
             <h2 class="section-header text-3xl font-bold mb-8 text-blue-700">
-                Asignaciones y Proyectos
+                💼 Asignaciones y Proyectos
             </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                <!-- Tarjeta de Proyecto 1 - Ejemplo Secuencial -->
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 border border-gray-100">
-                    <h3 class="text-xl font-semibold mb-2 text-blue-600">1. Calculadora de Área y Perímetro</h3>
-                    <p class="text-sm text-gray-500 mb-3">Conceptos: Estructuras Secuenciales (Entrada/Proceso/Salida)</p>
-                    <p class="mb-4">Algoritmo que pide las dimensiones de un rectángulo y calcula su área y perímetro, ilustrando el flujo de datos básico.</p>
-                    <a href="./proyectos/proyecto1.html" class="inline-block bg-blue-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700 transition duration-300">Ver Solución (Código y Seudocódigo)</a>
+                <div class="bg-white p-6 rounded-lg card-shadow transition duration-300 border-t-4 border-blue-500">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-600">Taller Práctico 1: Fundamentos y MySQL</h3>
+                    <p class="text-sm text-gray-500 mb-3">Archivos: `tallerpractico1.html`</p>
+                    <p class="mb-4">Investigación sobre búsqueda secuencial, Push Down (Heapify), MySQL, conectividad Python-MySQL y replicación de bases de datos.</p>
+                    <a href="./proyectos/tallerpractico1.html" class="inline-block bg-blue-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700 transition duration-300 font-medium">Ver Solución Completa</a>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg card-shadow transition duration-300 border-t-4 border-green-500">
+                    <h3 class="text-xl font-semibold mb-2 text-green-700">Examen Parcial 2: Proyecto Integrador (CHINOS CAFE)</h3>
+                    <p class="text-sm text-gray-500 mb-3">Archivos: `examenparcial2.html`</p>
+                    <p class="mb-4">Desarrollo de infraestructura (Linux + MySQL), diseño de red y lógica de negocio para un Sistema de Gestión de Restaurantes (CHINOS CAFE).</p>
+                    <a href="./proyectos/examenparcial2.html" class="inline-block bg-green-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-700 transition duration-300 font-medium">Ver Informe Profesional</a>
                 </div>
 
-                <!-- Tarjeta de Proyecto 2 - Ejemplo Alternativa -->
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 border border-gray-100">
-                    <h3 class="text-xl font-semibold mb-2 text-blue-600">2. Sistema de Calificación de Notas</h3>
-                    <p class="text-sm text-gray-500 mb-3">Conceptos: Estructuras Alternativas (IF/ELSE IF/ELSE)</p>
-                    <p class="mb-4">Programa que clasifica la nota de un estudiante (A, B, C, D, F) basado en su puntaje, usando lógica condicional.</p>
-                    <a href="./proyectos/proyecto2.html" class="inline-block bg-blue-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700 transition duration-300">Ver Solución</a>
+                <div class="bg-white p-6 rounded-lg card-shadow transition duration-300 border-t-4 border-yellow-500">
+                    <h3 class="text-xl font-semibold mb-2 text-yellow-700">Examen Parcial 1: [Título del Proyecto]</h3>
+                    <p class="text-sm text-gray-500 mb-3">Archivos: `examen_parcial1.html`</p>
+                    <p class="mb-4">Documentación de la aplicación de estructuras de control (secuenciales, alternativas, repetitivas) para la resolución de un caso de estudio específico.</p>
+                    <a href="./proyectos/examen_parcial1.html" class="inline-block bg-yellow-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-yellow-700 transition duration-300 font-medium">Ver Solución</a>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg card-shadow transition duration-300 border-t-4 border-purple-500">
+                    <h3 class="text-xl font-semibold mb-2 text-purple-700">Laboratorio 1: Instalación y Configuración</h3>
+                    <p class="text-sm text-gray-500 mb-3">Archivos: `Laboratorio_1.html`</p>
+                    <p class="mb-4">Evidencia de la configuración del entorno de desarrollo, incluyendo la instalación y prueba de funcionamiento de MySQL en el equipo de producción.</p>
+                    <a href="./proyectos/Laboratorio_1.html" class="inline-block bg-purple-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-purple-700 transition duration-300 font-medium">Ver Documentación</a>
                 </div>
 
-                <!-- Tarjeta de Proyecto 3 - Ejemplo Repetitiva -->
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 border border-gray-100">
-                    <h3 class="text-xl font-semibold mb-2 text-blue-600">3. Contador de Vocales en una Cadena</h3>
-                    <p class="text-sm text-gray-500 mb-3">Conceptos: Estructuras Repetitivas (FOR/WHILE) e Iteración</p>
-                    <p class="mb-4">Algoritmo que recorre una frase e indica cuántas veces aparece cada vocal, demostrando la repetición controlada.</p>
-                    <a href="./proyectos/proyecto3.html" class="inline-block bg-blue-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700 transition duration-300">Ver Solución</a>
+                <div class="bg-white p-6 rounded-lg card-shadow transition duration-300 border-t-4 border-indigo-500">
+                    <h3 class="text-xl font-semibold mb-2 text-indigo-700">Ejercicio Práctico 1: [Detalle del Ejercicio]</h3>
+                    <p class="text-sm text-gray-500 mb-3">Archivos: `ejercicio_practico1.html`</p>
+                    <p class="mb-4">Ejercicio complementario que aborda un problema específico con énfasis en el uso correcto de bucles o funciones para optimizar el código.</p>
+                    <a href="./proyectos/ejercicio_practico1.html" class="inline-block bg-indigo-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-indigo-700 transition duration-300 font-medium">Ver Solución</a>
                 </div>
 
-                <!-- Tarjeta de Proyecto 4 - Ejemplo Arreglos -->
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 border border-gray-100">
-                    <h3 class="text-xl font-semibold mb-2 text-blue-600">4. Gestión de Inventario Básico (Vectores)</h3>
-                    <p class="text-sm text-gray-500 mb-3">Conceptos: Arreglos Unidimensionales (Vectores) y Búsqueda</p>
-                    <p class="mb-4">Simulación de un pequeño inventario que permite agregar, buscar y listar artículos usando un arreglo.</p>
-                    <a href="./proyectos/proyecto4.html" class="inline-block bg-blue-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700 transition duration-300">Ver Solución</a>
+                <div class="bg-white p-6 rounded-lg card-shadow transition duration-300 border-t-4 border-red-500">
+                    <h3 class="text-xl font-semibold mb-2 text-red-700">Proyecto 1: Sistema XYZ (Alquiler de Equipos)</h3>
+                    <p class="text-sm text-gray-500 mb-3">Archivos: `proyecto_1.html`</p>
+                    <p class="mb-4">Prototipo de pseudocódigo, programa Python y Red LAN para gestionar el alquiler, cálculo de costo, registro y facturación de equipos de la empresa XYZ.</p>
+                    <a href="./proyectos/proyecto_1.html" class="inline-block bg-red-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-red-700 transition duration-300 font-medium">Ver Solución Completa</a>
                 </div>
-
-                <!-- Tarjeta de Proyecto 5 - Ejemplo Funciones -->
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 border border-gray-100">
-                    <h3 class="text-xl font-semibold mb-2 text-blue-600">5. Conversor de Unidades con Funciones</h3>
-                    <p class="text-sm text-gray-500 mb-3">Conceptos: Modularidad, Funciones y Paso de Parámetros</p>
-                    <p class="mb-4">Programa organizado con funciones dedicadas a convertir entre diferentes unidades de medida (ej: Celsius a Fahrenheit).</p>
-                    <a href="./proyectos/proyecto5.html" class="inline-block bg-blue-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700 transition duration-300">Ver Solución</a>
+                
+                <div class="bg-white p-6 rounded-lg card-shadow transition duration-300 border-t-4 border-gray-400">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-700">Investigación 2: [Título del Tema]</h3>
+                    <p class="text-sm text-gray-500 mb-3">Archivos: `INVESTIGACION2.html`</p>
+                    <p class="mb-4">Documentación de un segundo tema de investigación del curso, detallando conceptos, sintaxis y ejemplos de código relevantes.</p>
+                    <a href="./proyectos/INVESTIGACION2.html" class="inline-block bg-gray-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-gray-700 transition duration-300 font-medium">Ver Documento</a>
                 </div>
-
-                <!-- Agrega más tarjetas de proyectos según sea necesario -->
-
-            </div>
+                
+                </div>
         </section>
 
-        <!-- 4. Sección Perfil y Contacto -->
         <section id="perfil" class="pt-8 border-t border-gray-200">
             <h2 class="section-header text-3xl font-bold mb-6 text-blue-700">
-                Sobre el Autor
+                👤 Sobre el Autor
             </h2>
             <div class="bg-white p-6 rounded-lg shadow-md">
                 <p class="text-lg mb-4">
-                    Hola, soy **[Tu Nombre Completo]**, estudiante de **[Tu Carrera]**. Este portafolio documenta mi progreso y habilidades adquiridas en la asignatura de Desarrollo Lógico y Algorítmico. Mi enfoque está en la **eficiencia del código**, la **claridad del seudocódigo** y la **aplicación de estructuras de datos** para resolver problemas del mundo real.
+                    Hola, soy **[Tu Nombre Completo]**, estudiante de **[Tu Carrera]**. Este portafolio documenta mi progreso y habilidades adquiridas en la asignatura de **Desarrollo Lógico y Algorítmico**. Mi enfoque está en la **eficiencia del código**, la **claridad del seudocódigo** y la **aplicación de estructuras de datos** para resolver problemas del mundo real.
                 </p>
                 <div class="space-y-2 text-gray-600">
                     <p>📧 Correo Electrónico: <a href="mailto:tu.correo@ejemplo.com" class="text-blue-600 hover:underline">[tu.correo@ejemplo.com]</a></p>
@@ -127,7 +133,6 @@
 
     </main>
 
-    <!-- 5. Pie de Página (Footer) -->
     <footer class="bg-gray-800 text-white mt-12 py-6">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p class="text-sm">&copy; 2025 Portafolio DLA - [Tu Nombre]. Todos los derechos reservados.</p>
@@ -137,3 +142,4 @@
 
 </body>
 </html>
+``
